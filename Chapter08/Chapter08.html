@@ -1,0 +1,707 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>08量子模拟 · Sample GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="JP">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex-plus/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="../Chapter07/Chapter07.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    概览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Chapter01/Chapter01.html">
+            
+                <a href="../Chapter01/Chapter01.html">
+            
+                    
+                    01量子搜索，延迟选择和黑洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Chapter02/Chapter02.html">
+            
+                <a href="../Chapter02/Chapter02.html">
+            
+                    
+                    02量子线路与量子过程的经典模拟
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Chapter03/Chapter03.html">
+            
+                <a href="../Chapter03/Chapter03.html">
+            
+                    
+                    03量子纠错编码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Chapter04/Chapter04.html">
+            
+                <a href="../Chapter04/Chapter04.html">
+            
+                    
+                    04量子态重构与纠缠模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Chapter05/Chapter05.html">
+            
+                <a href="../Chapter05/Chapter05.html">
+            
+                    
+                    05量子互文
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../Chapter06/Chapter06.html">
+            
+                <a href="../Chapter06/Chapter06.html">
+            
+                    
+                    06时间晶体
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../Chapter07/Chapter07.html">
+            
+                <a href="../Chapter07/Chapter07.html">
+            
+                    
+                    07光量子信息处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9" data-path="Chapter08.html">
+            
+                <a href="Chapter08.html">
+            
+                    
+                    08量子模拟
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >08量子模拟</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x6982;&#x89C8;"><b>1. </b>&#x6982;&#x89C8;</a></li><ul><li><span class="title-icon "></span><a href="#the-promise-of-quantum-science--technology"><b>1.1. </b>The Promise of Quantum Science \&amp; Technology</a></li><ul><li><span class="title-icon "></span><a href="#feynmans-vision"><b>1.1.1. </b>Feynman&apos;s Vision</a></li></ul><li><span class="title-icon "></span><a href="#&#x91CF;&#x5B50;&#x6A21;&#x62DF;quantum-simulation"><b>1.2. </b>&#x91CF;&#x5B50;&#x6A21;&#x62DF;(Quantum Simulation)</a></li><ul><li><span class="title-icon "></span><a href="#&#x5B9E;&#x9A8C;&#x7CFB;&#x7EDF;"><b>1.2.1. </b>&#x5B9E;&#x9A8C;&#x7CFB;&#x7EDF;</a></li></ul></ul><li><span class="title-icon "></span><a href="#&#x7528;&#x4EC0;&#x4E48;&#x7CFB;&#x7EDF;&#x53BB;&#x6A21;&#x62DF;"><b>2. </b>&#x7528;&#x4EC0;&#x4E48;&#x7CFB;&#x7EDF;&#x53BB;&#x6A21;&#x62DF;</a></li><ul><li><span class="title-icon "></span><a href="#&#x51B7;&#x539F;&#x5B50;-cold-atoms"><b>2.1. </b>&#x51B7;&#x539F;&#x5B50; Cold atoms</a></li><li><span class="title-icon "></span><a href="#&#x79BB;&#x5B50;&#x9631;-trapped-ions"><b>2.2. </b>&#x79BB;&#x5B50;&#x9631; Trapped ions</a></li><li><span class="title-icon "></span><a href="#&#x8D85;&#x5BFC;&#x91CF;&#x5B50;&#x6BD4;&#x7279;-sc-qubits"><b>2.3. </b>&#x8D85;&#x5BFC;&#x91CF;&#x5B50;&#x6BD4;&#x7279; SC qubits</a></li><li><span class="title-icon "></span><a href="#&#x91D1;&#x521A;&#x77F3;&#x8272;&#x5FC3;-color-centers"><b>2.4. </b>&#x91D1;&#x521A;&#x77F3;&#x8272;&#x5FC3; Color centers</a></li><li><span class="title-icon "></span><a href="#&#x5404;&#x65B9;&#x5411;&#x7684;&#x5BF9;&#x6BD4;"><b>2.5. </b>&#x5404;&#x65B9;&#x5411;&#x7684;&#x5BF9;&#x6BD4;</a></li></ul><li><span class="title-icon "></span><a href="#&#x6A21;&#x62DF;&#x4EC0;&#x4E48;"><b>3. </b>&#x6A21;&#x62DF;&#x4EC0;&#x4E48;</a></li><ul><li><span class="title-icon "></span><a href="#&#x4F8B;&#x5B50;1-&#x70ED;&#x5316;&#x52A8;&#x529B;&#x5B66;&#xFF1A;&#x5C40;&#x57DF;&#x5316;"><b>3.1. </b>&#x4F8B;&#x5B50;1 &#x70ED;&#x5316;&#x52A8;&#x529B;&#x5B66;&#xFF1A;&#x5C40;&#x57DF;&#x5316;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5C40;&#x57DF;&#x5316;"><b>3.1.1. </b>&#x5C40;&#x57DF;&#x5316;</a></li></ul><li><span class="title-icon "></span><a href="#&#x4F8B;&#x5B50;2---&#x9ED1;&#x6D1E;"><b>3.2. </b>&#x4F8B;&#x5B50;2 - &#x9ED1;&#x6D1E;</a></li><li><span class="title-icon "></span><a href="#&#x4F8B;&#x5B50;3-&#x9AD8;&#x6E29;&#x8D85;&#x5BFC;"><b>3.3. </b>&#x4F8B;&#x5B50;3 &#x9AD8;&#x6E29;&#x8D85;&#x5BFC;</a></li><li><span class="title-icon "></span><a href="#&#x4F8B;&#x5B50;4-&#x62D3;&#x6251;"><b>3.4. </b>&#x4F8B;&#x5B50;4 &#x62D3;&#x6251;</a></li><ul><li><span class="title-icon "></span><a href="#&#x62D3;&#x6251;&#x5E8F;"><b>3.4.1. </b>&#x62D3;&#x6251;&#x5E8F;</a></li></ul></ul><li><span class="title-icon "></span><a href="#&#x672A;&#x6765;&#x53D1;&#x5C55;"><b>4. </b>&#x672A;&#x6765;&#x53D1;&#x5C55;</a></li><ul><ul><li><span class="title-icon "></span><a href="#hamiltonian-simulation"><b>4.1.1. </b>Hamiltonian Simulation</a></li><li><span class="title-icon "></span><a href="#quantum-phase-estimation"><b>4.1.2. </b>Quantum Phase Estimation</a></li></ul><li><span class="title-icon "></span><a href="#&#x7ED3;&#x8BBA;"><b>4.2. </b>&#x7ED3;&#x8BBA;</a></li></ul><li><span class="title-icon "></span><a href="#&#x9644;&#x5F55;&#xFF1A;&#x76F8;&#x5173;&#x8D44;&#x6E90;"><b>5. </b>&#x9644;&#x5F55;&#xFF1A;&#x76F8;&#x5173;&#x8D44;&#x6E90;</a></li></ul></div><a href="#&#x6982;&#x89C8;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><p>&#x91CF;&#x5B50;&#x6A21;&#x62DF; Quantum&apos; Simulation</p>
+<p><strong>&#x65F6;&#x95F4;&#xFF1A;</strong>2022&#x5E74;02&#x6708;13&#x65E5;</p>
+<p><strong>&#x6458;&#x8981;&#xFF1A;</strong>  &#x672C;&#x6F14;&#x8BB2;&#x5148;&#x662F;&#x4ECB;&#x7ECD;&#x4E86;&#x91CF;&#x5B50;&#x6A21;&#x62DF; Quantum&apos; Simulation&#x7684;&#x57FA;&#x672C;&#x6982;&#x5FF5;&#xFF0C;&#x5305;&#x62EC;&#x4EA7;&#x751F;&#x7684;&#x52A8;&#x673A;&#x3002;&#x7136;&#x540E;&#x4ECB;&#x7ECD;&#x5B9E;&#x9A8C;&#x4E0A;&#x7528;&#x4EC0;&#x4E48;&#x7269;&#x7406;&#x7CFB;&#x7EDF;&#x6765;&#x5B9E;&#x73B0;&#x91CF;&#x5B50;&#x6A21;&#x62DF;&#xFF0C;&#x6BD4;&#x5982;&#x51B7;&#x539F;&#x5B50;&#xFF0C;&#x8D85;&#x5BFC;&#x91CF;&#x5B50;&#x6BD4;&#x7279;&#xFF0C;&#x79BB;&#x5B50;&#x9631;&#x7B49;&#x7B49;&#x3002;&#x6700;&#x540E;&#x4ECB;&#x7ECD;&#x91CF;&#x5B50;&#x6A21;&#x62DF;&#x7684;&#x4E00;&#x4E9B;&#x5E94;&#x7528;&#xFF0C;&#x6BD4;&#x5982;&#x5728;&#x70ED;&#x5316;&#x52A8;&#x529B;&#x5B66;&#xFF0C;&#x6A21;&#x62DF;&#x62D3;&#x6251;&#x7269;&#x6001;&#xFF0C;&#x9AD8;&#x6E29;&#x8D85;&#x5BFC;&#x7B49;&#x7B49;&#x7269;&#x7406;&#x3002;</p>
+<p><strong>&#x4E3B;&#x8BB2;&#x4EBA;:</strong>  Hengyun (Harry) Zhou &#x672C;&#x79D1;MIT&#xFF0C;&#x535A;&#x58EB;&#x54C8;&#x4F5B;</p>
+<p><strong>&#x4E3B;&#x8981;&#x7814;&#x7A76;&#x9886;&#x57DF;:</strong>  </p>
+<p><strong>&#x4E2A;&#x4EBA;&#x4E3B;&#x9875;:</strong> </p>
+<p><strong>&#x8BB0;&#x5F55;&#x4EBA;&#xFF1A;</strong> &#x5E84;&#x5609;&#x57F9;</p>
+<p>[TOC]</p>
+<h1 id="&#x6982;&#x89C8;"><a name="&#x6982;&#x89C8;" class="anchor-navigation-ex-anchor" href="#&#x6982;&#x89C8;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x6982;&#x89C8;</h1>
+<h2 id="the-promise-of-quantum-science--technology"><a name="the-promise-of-quantum-science--technology" class="anchor-navigation-ex-anchor" href="#the-promise-of-quantum-science--technology"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. The Promise of Quantum Science \&amp; Technology</h2>
+<p>&#x6700;&#x8FD1;&#x8FD9;&#x4E9B;&#x5E74;&#x91CF;&#x5B50;&#x6280;&#x672F;&#x7684;&#x53D1;&#x5C55;&#xFF0C;&#x548C;&#x767E;&#x5E74;&#x524D;&#x7684;&#x91CF;&#x5B50;&#x9769;&#x547D;&#x4E0D;&#x540C;&#x7684;&#x5730;&#x65B9;</p>
+<p>1925&#x5E74;&#xFF0C;&#x859B;&#x5B9A;&#x8C14;&#x65B9;&#x7A0B;z</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>H</mi><mo>(</mo><mi>t</mi><mo>)</mo><mi mathvariant="normal">&#x2223;</mi><mi>&#x3C8;</mi><mo>(</mo><mi>t</mi><mo>)</mo><mo>&#x27E9;</mo><mo>=</mo><mi>i</mi><mi mathvariant="normal">&#x210F;</mi><mfrac><mrow><mi>d</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mi mathvariant="normal">&#x2223;</mi><mi>&#x3C8;</mi><mo>(</mo><mi>t</mi><mo>)</mo><mo>&#x27E9;</mo></mrow><annotation encoding="application/x-tex">
+H(t)|\psi(t)\rangle=i \hbar \frac{d}{d t}|\psi(t)\rangle
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.37144em;"></span><span class="strut bottom" style="height:2.05744em;vertical-align:-0.686em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.08125em;">H</span><span class="mopen">(</span><span class="mord mathit">t</span><span class="mclose">)</span><span class="mord">&#x2223;</span><span class="mord mathit" style="margin-right:0.03588em;">&#x3C8;</span><span class="mopen">(</span><span class="mord mathit">t</span><span class="mclose">)</span><span class="mclose">&#x27E9;</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mord mathit">i</span><span class="mord">&#x210F;</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.37144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathit">d</span><span class="mord mathit">t</span></span></span><span style="top:-3.15em;"><span class="pstrut" style="height:3em;"></span><span class="stretchy" style="height:0.2em;"><svg width="400em" height="0.2em" viewbox="0 0 400000 200" preserveaspectratio="xMinYMin slice"><path d="M0 80H400000 v40H0z M0 80H400000 v40H0z"/></svg></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathit">d</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord">&#x2223;</span><span class="mord mathit" style="margin-right:0.03588em;">&#x3C8;</span><span class="mopen">(</span><span class="mord mathit">t</span><span class="mclose">)</span><span class="mclose">&#x27E9;</span></span></span></span></span></p>
+<blockquote>
+<p>&#x73B0;&#x5728;&#x6709;&#x4EC0;&#x4E48;&#x65B0;&#x7684;&#x53D1;&#x5C55;&#xFF1F;</p>
+</blockquote>
+<ol>
+<li>&#x91CF;&#x5B50;&#x8BA1;&#x7B97;(Quantum Computing)<ul>
+<li>Shor&apos;s algorithm 1994</li>
+<li>First implementatians <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x223C;</mo><mn>2</mn><mn>0</mn><mn>0</mn><mn>0</mn><mi>s</mi></mrow><annotation encoding="application/x-tex">\sim 2000 s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base"><span class="mrel">&#x223C;</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mord">2</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord mathit">s</span></span></span></span></li>
+</ul>
+</li>
+<li>&#x91CF;&#x5B50;&#x6A21;&#x62DF;(Quantum Simulation)<ul>
+<li>Feynman 1982</li>
+<li>First implementations <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x223C;</mo><mn>2</mn><mn>0</mn><mn>0</mn><mn>0</mn><mi>s</mi></mrow><annotation encoding="application/x-tex">\sim 2000 s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base"><span class="mrel">&#x223C;</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mord">2</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord mathit">s</span></span></span></span></li>
+</ul>
+</li>
+<li>&#x91CF;&#x5B50;&#x4F20;&#x611F;(Quantum Metrology)<ul>
+<li>First proposals <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mn>9</mn><mn>8</mn><mn>0</mn><mi>s</mi></mrow><annotation encoding="application/x-tex">1980 s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base"><span class="mord">1</span><span class="mord">9</span><span class="mord">8</span><span class="mord">0</span><span class="mord mathit">s</span></span></span></span> </li>
+<li>First implementations <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x223C;</mo><mn>2</mn><mn>0</mn><mn>0</mn><mn>0</mn><mi>s</mi></mrow><annotation encoding="application/x-tex">\sim 2000 s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base"><span class="mrel">&#x223C;</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mord">2</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord mathit">s</span></span></span></span></li>
+</ul>
+</li>
+<li>&#x91CF;&#x5B50;&#x901A;&#x8BAF;(Quantum Communication) <ul>
+<li>Bennett \&amp; Brassard, 1984 </li>
+<li>First networks <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>&#x223C;</mo><mn>2</mn><mn>0</mn><mn>1</mn><mn>0</mn></mrow><annotation encoding="application/x-tex">\sim 2010</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base"><span class="mrel">&#x223C;</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mord">2</span><span class="mord">0</span><span class="mord">1</span><span class="mord">0</span></span></span></span> s</li>
+</ul>
+</li>
+</ol>
+<p>&#x8FD9;&#x4E9B;&#x53D1;&#x5C55;&#x7684;&#x4E00;&#x4E2A;&#x5185;&#x5728;&#x903B;&#x8F91;</p>
+<blockquote>
+<p>&#x80FD;&#x591F;&#x6709;&#x6548;&#x5730;&#x53BB;<strong>&#x63A7;&#x5236;</strong>&#x4E00;&#x4E9B;&#x91CF;&#x5B50;&#x7CFB;&#x7EDF;(Controllable quantum systems)&#xFF0C;<strong>&#x63A2;&#x6D4B;</strong>&#x4E00;&#x4E2A;&#x91CF;&#x5B50;&#x7CFB;&#x7EDF;</p>
+</blockquote>
+<h3 id="feynmans-vision"><a name="feynmans-vision" class="anchor-navigation-ex-anchor" href="#feynmans-vision"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. Feynman&apos;s Vision</h3>
+<p>&#x5177;&#x4F53;&#x5230;&#x91CF;&#x5B50;&#x6A21;&#x62DF;&#x65B9;&#x5411;&#xFF0C;1982&#x5E74;&#x8D39;&#x66FC;(Richard Feynman)&#x63D0;&#x51FA;&#x6700;&#x57FA;&#x672C;&#x7684;&#x60F3;&#x6CD5;</p>
+<blockquote>
+<p>&quot;Nature isn&apos;t classical, dammit, and if you want to make a simulation of nature, you&apos;d better make it quantum mechanical, and by golly it&apos;s a wonderful problem, because it doesn&apos;t look so easy.&quot; </p>
+<p>&#x2014;&#x2014; Richard Feynman</p>
+<p>Simulating Physics with Computers <a href="http://www.cs.berkeley.edu/~christos/classics/Feynman.pdf" target="_blank">http://www.cs.berkeley.edu/~christos/classics/Feynman.pdf</a>&quot;, International Journal of Theoretical Physics, volume 21, 1982, p. 467-488, at p. 486</p>
+</blockquote>
+<p>&#x5927;&#x81EA;&#x7136;&#x672C;&#x8EAB;&#x5E76;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x7ECF;&#x5178;&#x7684;&#x7CFB;&#x7EDF;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x60F3;&#x53BB;&#x6A21;&#x62DF;&#x5927;&#x81EA;&#x7136;&#xFF0C;&#x90A3;&#x6211;&#x4EEC;&#x4E5F;&#x8BB8;&#x5C31;&#x5E94;&#x8BE5;&#x7528;&#x8FD9;&#x4E2A;&#x4E00;&#x4E9B;&#x91CF;&#x5B50;&#x7CFB;&#x7EDF;&#x6765;&#x8FDB;&#x884C;&#x6A21;&#x62DF;&#x3002;</p>
+<p>&#x4E3A;&#x4EC0;&#x4E48;&#x8BF4;&#x7528;&#x7ECF;&#x5178;&#x8BA1;&#x7B97;&#x6A21;&#x62DF;&#x4F1A;&#x6709;&#x56F0;&#x96BE;&#xFF1F;&#x7406;&#x7531;&#x4E4B;&#x4E00;</p>
+<ul>
+<li>&#x5982;&#x679C;&#x6709;1&#x4E2A;&#x91CF;&#x5B50;&#x6BD4;&#x7279;: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>a</mi><mn>0</mn></msub><mi mathvariant="normal">&#x2223;</mi><mn>0</mn><mo>&#x27E9;</mo><mo>+</mo><msub><mi>a</mi><mn>1</mn></msub><mi mathvariant="normal">&#x2223;</mi><mn>1</mn><mo>&#x27E9;</mo></mrow><annotation encoding="application/x-tex">a_{0}|0\rangle+a_{1}|1\rangle</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord"><span class="mord mathit">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">0</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mord">&#x2223;</span><span class="mord">0</span><span class="mclose">&#x27E9;</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathit">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mord">&#x2223;</span><span class="mord">1</span><span class="mclose">&#x27E9;</span></span></span></span><ul>
+<li>&#x9700;&#x8981;&#x4E24;&#x4E2A;&#x4E24;&#x4E2A;&#x6570;&#x5B57;&#x63CF;&#x8FF0;</li>
+</ul>
+</li>
+<li>&#x5982;&#x679C;&#x6709;2&#x4E2A;&#x91CF;&#x5B50;&#x6BD4;&#x7279;: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>a</mi><mrow><mn>0</mn><mn>0</mn></mrow></msub><mi mathvariant="normal">&#x2223;</mi><mn>0</mn><mn>0</mn><mo>&#x27E9;</mo><mo>+</mo><msub><mi>a</mi><mrow><mn>0</mn><mn>1</mn></mrow></msub><mi mathvariant="normal">&#x2223;</mi><mn>0</mn><mn>1</mn><mo>&#x27E9;</mo><mo>+</mo><msub><mi>a</mi><mrow><mn>1</mn><mn>0</mn></mrow></msub><mi mathvariant="normal">&#x2223;</mi><mn>1</mn><mn>0</mn><mo>&#x27E9;</mo><mo>+</mo><msub><mi>a</mi><mrow><mn>1</mn><mn>1</mn></mrow></msub><mi mathvariant="normal">&#x2223;</mi><mn>1</mn><mn>1</mn><mo>&#x27E9;</mo></mrow><annotation encoding="application/x-tex">a_{00}|00\rangle+a_{01}|01\rangle+a_{10}|10\rangle+a_{11}|11\rangle</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base"><span class="mord"><span class="mord mathit">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">0</span><span class="mord mtight">0</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mord">&#x2223;</span><span class="mord">0</span><span class="mord">0</span><span class="mclose">&#x27E9;</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathit">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">0</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mord">&#x2223;</span><span class="mord">0</span><span class="mord">1</span><span class="mclose">&#x27E9;</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathit">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">0</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mord">&#x2223;</span><span class="mord">1</span><span class="mord">0</span><span class="mclose">&#x27E9;</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathit">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mord">&#x2223;</span><span class="mord">1</span><span class="mord">1</span><span class="mclose">&#x27E9;</span></span></span></span><ul>
+<li>&#x9700;&#x8981;4&#x4E2A;&#x4E24;&#x4E2A;&#x6570;&#x5B57;&#x63CF;&#x8FF0;</li>
+</ul>
+</li>
+<li>&#x5982;&#x679C;&#x6709;N&#x4E2A;&#x91CF;&#x5B50;&#x6BD4;&#x7279;<ul>
+<li>&#x9700;&#x8981; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mi>N</mi></msup></mrow><annotation encoding="application/x-tex">2^{N}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8413309999999999em;"></span><span class="strut bottom" style="height:0.8413309999999999em;vertical-align:0em;"></span><span class="base"><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413309999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.10903em;">N</span></span></span></span></span></span></span></span></span></span></span></span> &#x4E2A;&#x4E24;&#x4E2A;&#x6570;&#x5B57;&#x63CF;&#x8FF0; </li>
+<li>&#x6307;&#x6570;&#x7EA7;</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>&quot;Let the computer itself be built of quantum mechanical elements which obey quantum mechanical laws&quot; </p>
+<p>&#x2014;&#x2014; Richard Feynman</p>
+</blockquote>
+<h2 id="&#x91CF;&#x5B50;&#x6A21;&#x62DF;quantum-simulation"><a name="&#x91CF;&#x5B50;&#x6A21;&#x62DF;quantum-simulation" class="anchor-navigation-ex-anchor" href="#&#x91CF;&#x5B50;&#x6A21;&#x62DF;quantum-simulation"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x91CF;&#x5B50;&#x6A21;&#x62DF;(Quantum Simulation)</h2>
+<p>&#x91CF;&#x5B50;&#x6A21;&#x62DF;(Quantum Simulation)&#x7684;&#x57FA;&#x672C;&#x601D;&#x8DEF;&#xFF1A;</p>
+<p><img src="https://jptanjing.oss-cn-beijing.aliyuncs.com/img/image-20220430004850076.png" style="zoom:50%;"></p>
+<ol>
+<li>&#x91CF;&#x5B50;&#x7CFB;&#x7EDF;&#x7684;&#x6F14;&#x5316;&#x8FC7;&#x7A0B; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">&#x2223;</mi><mi>&#x3D5;</mi><mo>(</mo><mn>0</mn><mo>)</mo><mo>&#x27E9;</mo><mstyle><msup><mo><mo>&#x27F6;</mo></mo><mi>U</mi></msup></mstyle><mi mathvariant="normal">&#x2223;</mi><mi>&#x3D5;</mi><mo>(</mo><mi>t</mi><mo>)</mo><mo>&#x27E9;</mo></mrow><annotation encoding="application/x-tex">|\phi(0)\rangle \stackrel{U}{\longrightarrow}|\phi( t )\rangle</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.2893310000000002em;"></span><span class="strut bottom" style="height:1.5393310000000002em;vertical-align:-0.25em;"></span><span class="base"><span class="mord">&#x2223;</span><span class="mord mathit">&#x3D5;</span><span class="mopen">(</span><span class="mord">0</span><span class="mclose">)</span><span class="mclose">&#x27E9;</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mrel"><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.2893310000000002em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop">&#x27F6;</span></span></span><span style="top:-3.7110000000000003em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.10903em;">U</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.011em;"></span></span></span></span></span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mord">&#x2223;</span><span class="mord mathit">&#x3D5;</span><span class="mopen">(</span><span class="mord mathit">t</span><span class="mclose">)</span><span class="mclose">&#x27E9;</span></span></span></span></li>
+<li>&#x4F46;&#x662F;&#x56E0;&#x4E3A;&#x4E0D;&#x597D;&#x8BA1;&#x7B97;&#x6700;&#x540E;&#x7684;&#x7ED3;&#x679C;&#x662F;&#x4EC0;&#x4E48;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5236;&#x5907;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x5E73;&#x53F0;&#xFF0C;&#x6709;&#x53E6;&#x5916;&#x4E00;&#x5957;&#x6F14;&#x5316;&#x3002;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x6700;&#x7EC8;&#x7684;&#x6D4B;&#x91CF;&#x3002;</li>
+<li>&#x8FD9;&#x4E9B;&#x4E1C;&#x897F;&#x5728;&#x67D0;&#x79CD;&#x7A0B;&#x5EA6;&#x4E0A;&#x4E00;&#x4E00;&#x5BF9;&#x5E94;&#x7684;&#x5173;&#x7CFB;&#xFF0C;&#x8DDF;&#x6211;&#x4EEC;&#x539F;&#x6765;&#x7684;&#x7CFB;&#x7EDF;&#x662F;&#x4E00;&#x4E2A;&#x67D0;&#x79CD;&#x7A0B;&#x5EA6;&#x4E0A;&#x7684;&#x8FD1;&#x4F3C;&#x3002;</li>
+</ol>
+<h3 id="&#x5B9E;&#x9A8C;&#x7CFB;&#x7EDF;"><a name="&#x5B9E;&#x9A8C;&#x7CFB;&#x7EDF;" class="anchor-navigation-ex-anchor" href="#&#x5B9E;&#x9A8C;&#x7CFB;&#x7EDF;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.1. &#x5B9E;&#x9A8C;&#x7CFB;&#x7EDF;</h3>
+<p>&#x6A21;&#x62DF;&#x4F7F;&#x7528;&#x7684;&#x771F;&#x5B9E;&#x5B9E;&#x9A8C;&#x7CFB;&#x7EDF;&#xFF0C;&#x5E38;&#x89C1;&#x7684;&#x6709;</p>
+<ol>
+<li>&#x51B7;&#x539F;&#x5B50; Cold atoms</li>
+<li>&#x79BB;&#x5B50;&#x9631; Trapped ions</li>
+<li>&#x8D85;&#x5BFC;&#x91CF;&#x5B50;&#x6BD4;&#x7279; SC qubits</li>
+<li>&#x5149;&#x5B50; Photonics</li>
+<li>&#x91CF;&#x5B50;&#x70B9; Quantum dots</li>
+<li>&#x91D1;&#x521A;&#x77F3;&#x8272;&#x5FC3; Color centers</li>
+</ol>
+<blockquote>
+<p>&#x8FD9;&#x4E9B;&#x7CFB;&#x7EDF;&#x9700;&#x8981;&#x6EE1;&#x8DB3;&#x4EC0;&#x4E48;&#x6761;&#x4EF6;&#x5462;&#xFF1F;</p>
+</blockquote>
+<ul>
+<li>&#x521D;&#x6001;&#x51C6;&#x5907; State preparation</li>
+<li>&#x5B9E;&#x73B0;&#x5E7A;&#x6B63;&#x6F14;&#x5316; Implement interesting unitary U</li>
+<li>&#x6D4B;&#x91CF; Measurement</li>
+</ul>
+<p>&#x8FD9;&#x4E9B;&#x8FC7;&#x7A0B;&#x5176;&#x5B9E;&#x9664;&#x4E86;&#x91CF;&#x5B50;&#x6A21;&#x62DF;&#xFF0C;&#x540C;&#x65F6;&#x4E5F;&#x662F;&#x91CF;&#x5B50;&#x8BA1;&#x7B97;&#x9700;&#x8981;&#x7684;&#x8FC7;&#x7A0B;&#x3002;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5BF9;&#x6BD4;&#x4E00;&#x4E0B;&#x4E24;&#x8005;&#x7684;&#x5173;&#x7CFB;</p>
+<ol>
+<li>&#x91CF;&#x5B50;&#x6A21;&#x62DF;&#x53EF;&#x4EE5;&#x770B;&#x4F5C;&#x662F;&#x91CF;&#x5B50;&#x8BA1;&#x7B97;&#x7684;&#x7B80;&#x5316;&#x7248;&#x3002;<ul>
+<li>&#x91CF;&#x5B50;&#x8BA1;&#x7B97;&#x5728;&#x5BB9;&#x9519;&#x7B49;&#x65B9;&#x9762;&#x6BD4;&#x91CF;&#x5B50;&#x6A21;&#x62DF;&#x8981;&#x6C42;&#x9AD8;&#x5F88;&#x591A;&#x3002;</li>
+<li>&#x540C;&#x65F6;&#x8FD9;&#x4E2A;&#x4E5F;&#x610F;&#x5473;&#x7740;&#x91CF;&#x5B50;&#x6A21;&#x62DF;&#x53EF;&#x80FD;&#x662F;&#x6211;&#x4EEC;&#x8FD1;&#x671F;&#x5C31;&#x80FD;&#x591F;&#x505A;&#x5F88;&#x591A;&#x7684;&#x5DE5;&#x4F5C;</li>
+</ul>
+</li>
+</ol>
+<h1 id="&#x7528;&#x4EC0;&#x4E48;&#x7CFB;&#x7EDF;&#x53BB;&#x6A21;&#x62DF;"><a name="&#x7528;&#x4EC0;&#x4E48;&#x7CFB;&#x7EDF;&#x53BB;&#x6A21;&#x62DF;" class="anchor-navigation-ex-anchor" href="#&#x7528;&#x4EC0;&#x4E48;&#x7CFB;&#x7EDF;&#x53BB;&#x6A21;&#x62DF;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x7528;&#x4EC0;&#x4E48;&#x7CFB;&#x7EDF;&#x53BB;&#x6A21;&#x62DF;</h1>
+<h2 id="&#x51B7;&#x539F;&#x5B50;-cold-atoms"><a name="&#x51B7;&#x539F;&#x5B50;-cold-atoms" class="anchor-navigation-ex-anchor" href="#&#x51B7;&#x539F;&#x5B50;-cold-atoms"><i class="fa fa-link" aria-hidden="true"></i></a>2.1. &#x51B7;&#x539F;&#x5B50; Cold atoms</h2>
+<p>&#x91CF;&#x5B50;&#x6A21;&#x62DF;&#x505A;&#x5F97;&#x6700;&#x591A;&#x7684;&#xFF0C;&#x53EF;&#x80FD;&#x662F;&#x51B7;&#x539F;&#x5B50;&#x7CFB;&#x7EDF;&#x3002;</p>
+<p>&#x4E3E;&#x4F8B;&#x8BF4;&#x660E;</p>
+<p><img src="https://jptanjing.oss-cn-beijing.aliyuncs.com/img/image-20220430010956252.png" style="zoom:50%;"></p>
+<p>&#x91CF;&#x5B50;&#x6C14;&#x663E;&#x5FAE;&#x955C;</p>
+<ul>
+<li>&#x4E0D;&#x540C;&#x7684;&#x5149;&#x6676;&#x683C;&#x6765;&#x9650;&#x5236;&#x8FD9;&#x4E9B;&#x539F;&#x5B50;</li>
+<li>&#x6709;&#x4E00;&#x4E2A;&#x9AD8;&#x5206;&#x8FA8;&#x7387;&#x7684;&#x663E;&#x5FAE;&#x955C;&#xFF0C;&#x80FD;&#x591F;&#x5355;&#x4E2A;&#x89C2;&#x6D4B;&#x5728;&#x7CFB;&#x7EDF;&#x91CC;&#x6BCF;&#x4E00;&#x4E2A;&#x6676;&#x683C;&#x91CC;&#x6709;&#x6CA1;&#x6709;&#x539F;&#x5B50;<ul>
+<li>&#x751A;&#x81F3;&#x4E00;&#x4E9B;&#x5B9E;&#x9A8C;&#x53EF;&#x4EE5;&#x63A2;&#x6D4B;&#xFF0C;&#x5728;&#x67D0;&#x4E00;&#x4E2A;&#x5355;&#x72EC;&#x5730;&#x65B9;&#x539F;&#x5B50;&#x7684;&#x539F;&#x5B50;&#x6001;&#x3002;</li>
+</ul>
+</li>
+</ul>
+<p>Quantum gas microscopes. <em>Gross and Bloch, Science 357, 995-1001 (2017)</em></p>
+<p>Quantum gas microscopes enable the high-resolution fluorescence detection of atoms in single sites of a two-dimensional layer of optical lattices. The lattice spacing is small (typically <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>0</mn><mi mathvariant="normal">.</mi><mn>5</mn><mi>&#x3BC;</mi><mi>m</mi></mrow><annotation encoding="application/x-tex">0.5 \mu m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="base"><span class="mord">0</span><span class="mord">.</span><span class="mord">5</span><span class="mord mathit">&#x3BC;</span><span class="mord mathit">m</span></span></span></span> ), such that the atoms can move through the lattice by tunneling with amplitude <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>t</mi></mrow><annotation encoding="application/x-tex">t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.61508em;"></span><span class="strut bottom" style="height:0.61508em;vertical-align:0em;"></span><span class="base"><span class="mord mathit">t</span></span></span></span>. Additionally, they interact with each other with strength <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>U</mi></mrow><annotation encoding="application/x-tex">U</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.10903em;">U</span></span></span></span> when multiple atoms meet at the same lattice site. Quantum gas microscopy can provide access to single snapshots of the locally resolved atomic density in strongly correlated many-body systems.</p>
+<p><img src="https://jptanjing.oss-cn-beijing.aliyuncs.com/img/image-20220430011555914.png" style="zoom:50%;"></p>
+<p>&#x4E94;&#x516D;&#x5E74;&#x524D;&#x7684;&#x6BD4;&#x8F83;&#x65B0;&#x7684;&#x4E00;&#x4E2A;&#x6280;&#x672F;</p>
+<ol>
+<li>&#x4F5C;&#x7528;&#xFF1A;&#x5236;&#x5907;&#x5747;&#x5300;&#x521D;&#x6001;</li>
+<li>&#x901A;&#x8FC7;&#x5149;&#x5B66;&#x7684;&#x624B;&#x6BB5;&#x628A;&#x539F;&#x5B50;&#x675F;&#x7F1A;&#x5728;&#x5149;&#x954A;&#x4E4B;&#x4E2D;</li>
+<li>&#x901A;&#x8FC7;Spatial light modulator (SLM)&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;&#x662F;&#x4E00;&#x4E2A;&#x80FD;&#x591F;&#x65BD;&#x52A0;&#x76F8;&#x4F4D;&#x7684;&#x9635;&#x5217;&#xFF0C;&#x901A;&#x8FC7;&#x5149;&#x7684;&#x5E72;&#x6D89;&#x80FD;&#x591F;&#x5B9E;&#x73B0;&#x5404;&#x79CD;&#x5404;&#x6837;&#x4E0D;&#x540C;&#x7684;&#x7684;&#x5149;&#x6591;&#x3002;</li>
+<li>&#x901A;&#x8FC7;acousto-optical deflector (AOD) &#x5FEB;&#x901F;&#x91CD;&#x65B0;&#x6392;&#x5E03;&#x539F;&#x5B50;</li>
+</ol>
+<p>Deterministic atom array preparation. </p>
+<p>Left: Schematic of the optical setup to generate arbitrary two-dimensional trap arrays via the spatial light modulator (SLM). The position of the moving tweezer, which sorts the initially randomly loaded atoms into the target array, is computercontrolled (control system) using an acousto-optical deflector (2d-AOD). The charge-coupled device (CCD) camera allows for nondestructive position monitoring of the atoms. </p>
+<p>Right: Example of one realization of deterministic array loading. The initially randomly loaded sample (top) is sorted in about <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mn>0</mn><mn>0</mn><mi>m</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">100 ms</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.64444em;"></span><span class="strut bottom" style="height:0.64444em;vertical-align:0em;"></span><span class="base"><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span><span class="mord mathit">m</span><span class="mord mathit">s</span></span></span></span> to a uniformly filled two-dimensional array (bottom). The detected atomic fluorescence is encoded from dark to light in the color scale; each spatially distinct area of high fluorescence signal corresponds to a single atom. [Adapted, with permission, from (153)]</p>
+<h2 id="&#x79BB;&#x5B50;&#x9631;-trapped-ions"><a name="&#x79BB;&#x5B50;&#x9631;-trapped-ions" class="anchor-navigation-ex-anchor" href="#&#x79BB;&#x5B50;&#x9631;-trapped-ions"><i class="fa fa-link" aria-hidden="true"></i></a>2.2. &#x79BB;&#x5B50;&#x9631; Trapped ions</h2>
+<ul>
+<li>&#x524D;&#x9762;&#x51B7;&#x539F;&#x5B50;&#x9886;&#x57DF;&#x4E2D;&#xFF0C;&#x7528;&#x5149;&#x675F;&#x7F1A;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x5B83;&#x4EEC;&#x5B9E;&#x9645;&#x4E0A;&#x4E00;&#x822C;&#x662F;&#x4E2D;&#x6027;&#x539F;&#x5B50;&#x3002;</li>
+<li>&#x5728;&#x79BB;&#x5B50;&#x9631; Trapped ions &#x9886;&#x57DF;&#xFF0C;&#x628A;&#x8FD9;&#x4E2A;&#x4E2D;&#x6027;&#x539F;&#x5B50;&#x6253;&#x6389;&#x4E00;&#x4E2A;&#x7535;&#x5B50;&#xFF0C;&#x5F97;&#x5230;&#x5E26;&#x4E00;&#x4E2A;&#x6B63;&#x7535;&#x8377;&#x7684;&#x79BB;&#x5B50;&#xFF0C;&#x8FD9;&#x4E2A;&#x79BB;&#x5B50;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x7528;&#x7535;&#x573A;&#x53BB;&#x675F;&#x7F1A;&#x5B83;&#x3002;</li>
+</ul>
+<p><img src="https://jptanjing.oss-cn-beijing.aliyuncs.com/img/image-20220430113635106.png" style="zoom:50%;"></p>
+<p>&#x901A;&#x8FC7;&#x4E00;&#x4E9B;&#x6FC0;&#x5149;&#xFF0C;&#x6211;&#x4EEC;&#x80FD;&#x591F;&#x628A;&#x79BB;&#x5B50;&#x4E4B;&#x4E2D;&#x7684;&#x81EA;&#x65CB;&#x81EA;&#x7531;&#x5EA6;&#xFF0C;&#x548C;&#x7CFB;&#x7EDF;&#x58F0;&#x5B50;&#x7684;&#x4E00;&#x4E9B;&#x81EA;&#x7531;&#x5EA6;&#x76F8;&#x8026;&#x5408;&#x8D77;&#x6765;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x4E0D;&#x540C;&#x79BB;&#x5B50;&#x4E4B;&#x95F4;&#x7684;&#x91CF;&#x5B50;&#x95E8;&#xFF0C;&#x54C8;&#x5BC6;&#x987F;&#x91CF;&#x6F14;&#x5316;&#x7684;&#x64CD;&#x4F5C;&#x3002;</p>
+<h2 id="&#x8D85;&#x5BFC;&#x91CF;&#x5B50;&#x6BD4;&#x7279;-sc-qubits"><a name="&#x8D85;&#x5BFC;&#x91CF;&#x5B50;&#x6BD4;&#x7279;-sc-qubits" class="anchor-navigation-ex-anchor" href="#&#x8D85;&#x5BFC;&#x91CF;&#x5B50;&#x6BD4;&#x7279;-sc-qubits"><i class="fa fa-link" aria-hidden="true"></i></a>2.3. &#x8D85;&#x5BFC;&#x91CF;&#x5B50;&#x6BD4;&#x7279; SC qubits</h2>
+<p><img src="https://jptanjing.oss-cn-beijing.aliyuncs.com/img/image-20220430115204826.png" style="zoom:50%;"></p>
+<ul>
+<li>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4E00;&#x4E9B; flux &#x6765;&#x8C03;&#x76F8;&#x4E92;&#x4F5C;&#x7528;&#x3002;&#x53EF;&#x4EE5;&#x6A21;&#x62DF;&#x4E00;&#x4E9B;&#x6BD4;&#x5982;&#x8BF4;&#x9519;&#x6251;&#x91CF;&#x7684;&#x7CFB;&#x7EDF;&#x3002;</li>
+<li>&#x8D85;&#x5BFC;&#x91CF;&#x5B50;&#x6BD4;&#x7279;&#x7684;&#x4E00;&#x4E2A;&#x4F18;&#x52BF;&#xFF1A;&#x4E0D;&#x540C;&#x6BD4;&#x7279;&#x4E4B;&#x95F4;&#x7684;&#x8054;&#x7CFB;&#x662F;&#x901A;&#x8FC7;&#x5FAE;&#x6CE2;&#x6CE2;&#x6BB5;&#x7684;&#x6CE2;&#x5BFC;&#x76F8;&#x8054;&#x7CFB;&#x3002;&#x6709;&#x6BD4;&#x8F83;&#x9AD8;&#x7684;&#x81EA;&#x7531;&#x53BB;&#x5F97;&#x5230;&#x4E00;&#x4E9B;&#x6BD4;&#x8F83;&#x5947;&#x5947;&#x602A;&#x602A;&#x7684;&#x8FDE;&#x63A5;&#x72B6;&#x6001;&#x56FE;&#x3002;</li>
+</ul>
+<h2 id="&#x91D1;&#x521A;&#x77F3;&#x8272;&#x5FC3;-color-centers"><a name="&#x91D1;&#x521A;&#x77F3;&#x8272;&#x5FC3;-color-centers" class="anchor-navigation-ex-anchor" href="#&#x91D1;&#x521A;&#x77F3;&#x8272;&#x5FC3;-color-centers"><i class="fa fa-link" aria-hidden="true"></i></a>2.4. &#x91D1;&#x521A;&#x77F3;&#x8272;&#x5FC3; Color centers</h2>
+<p>&#x6F14;&#x8BB2;&#x8005;&#x81EA;&#x5DF1;&#x7684;&#x7814;&#x7A76;&#x65B9;&#x5411;</p>
+<p><img src="https://jptanjing.oss-cn-beijing.aliyuncs.com/img/image-20220430120102205.png" style="zoom:50%;"></p>
+<h2 id="&#x5404;&#x65B9;&#x5411;&#x7684;&#x5BF9;&#x6BD4;"><a name="&#x5404;&#x65B9;&#x5411;&#x7684;&#x5BF9;&#x6BD4;" class="anchor-navigation-ex-anchor" href="#&#x5404;&#x65B9;&#x5411;&#x7684;&#x5BF9;&#x6BD4;"><i class="fa fa-link" aria-hidden="true"></i></a>2.5. &#x5404;&#x65B9;&#x5411;&#x7684;&#x5BF9;&#x6BD4;</h2>
+<p>TABLE I. Strengths and weaknesses of some of the proposed and demonstrated quantum simulators.</p>
+<table>
+<thead>
+<tr>
+<th>Quantum simulator</th>
+<th>Strength</th>
+<th>Weakness</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Neutral atoms</td>
+<td>Scaling</td>
+<td>Individual control and readout</td>
+</tr>
+<tr>
+<td>Trapped ions</td>
+<td>Individual control and readout</td>
+<td>Scaling</td>
+</tr>
+<tr>
+<td>Cavity arrays</td>
+<td>Individual control and readout</td>
+<td>Scaling</td>
+</tr>
+<tr>
+<td>Electronic spins (quantum dots)</td>
+<td>Individual control and readout; tunability</td>
+<td>Scaling</td>
+</tr>
+<tr>
+<td>Superconducting circuits</td>
+<td>Individual control and readout; tunability</td>
+<td>Scaling(some recent progress)</td>
+</tr>
+<tr>
+<td>Photons (linear optics)</td>
+<td>Flexibility</td>
+<td>Scaling</td>
+</tr>
+<tr>
+<td>Nuclear spins (NMR)</td>
+<td>Well-established; readily available technology</td>
+<td>Scaling; no individual control</td>
+</tr>
+</tbody>
+</table>
+<p>&#x4E0A;&#x9762;&#x7684;&#x8868;&#x683C;&#x662F;10&#x5E74;&#x524D;&#x7684;&#x7EFC;&#x8FF0;&#x3002;&#x7ECF;&#x8FC7;&#x8FD9;10&#x5E74;&#x53D1;&#x5C55;&#xFF0C;&#x53D1;&#x751F;&#x4E86;&#x4E00;&#x4E9B;&#x6539;&#x53D8;</p>
+<ul>
+<li>Neutral atoms&#x5DF2;&#x7ECF;&#x53EF;&#x4EE5;&#x505A;&#x5230;Individual control and readout</li>
+<li>Trapped ions&#x7684;&#x62D3;&#x5C55;&#x4ECE;&#x4E94;&#x516D;&#x4E2A;&#x8FBE;&#x5230;&#x4E09;&#x5341;&#x591A;&#x4E2A;</li>
+</ul>
+<h1 id="&#x6A21;&#x62DF;&#x4EC0;&#x4E48;"><a name="&#x6A21;&#x62DF;&#x4EC0;&#x4E48;" class="anchor-navigation-ex-anchor" href="#&#x6A21;&#x62DF;&#x4EC0;&#x4E48;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x6A21;&#x62DF;&#x4EC0;&#x4E48;</h1>
+<p>&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x53EF;&#x4EE5;&#x7EC6;&#x5206;&#x6210;&#x4E24;&#x4E2A;&#x95EE;&#x9898;</p>
+<ol>
+<li>&#x6A21;&#x62DF;&#x4EC0;&#x4E48;&#x6A21;&#x578B;&#xFF1F;</li>
+<li>&#x60F3;&#x63A2;&#x7A76;&#x4EC0;&#x4E48;&#x6837;&#x7684;&#x7269;&#x7406;&#xFF1F;</li>
+</ol>
+<h4 id="&#x6A21;&#x62DF;&#x4EC0;&#x4E48;&#x6A21;&#x578B;"><a name="&#x6A21;&#x62DF;&#x4EC0;&#x4E48;&#x6A21;&#x578B;" class="anchor-navigation-ex-anchor" href="#&#x6A21;&#x62DF;&#x4EC0;&#x4E48;&#x6A21;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6A21;&#x62DF;&#x4EC0;&#x4E48;&#x6A21;&#x578B;</h4>
+<ul>
+<li>&#x51DD;&#x805A;&#x6001;&#x7269;&#x7406;&#x4E2D;&#x7684;<ul>
+<li>Hubbard models &#x8FD9;&#x4E2A;&#x6A21;&#x578B;&#x88AB;&#x8BA4;&#x4E3A;&#x662F;&#x89E3;&#x91CA;&#x9AD8;&#x6E29;&#x8D85;&#x5BFC;&#x7684;&#x91CD;&#x8981;&#x6A21;&#x578B;</li>
+<li>Spin models &#x81EA;&#x65CB;&#x6A21;&#x578B;&#x6709;&#x5F88;&#x6709;&#x8DA3;&#x7684;&#x7269;&#x7406;&#x548C;&#x590D;&#x6742;&#x7684;&#x8BA1;&#x7B97;</li>
+</ul>
+</li>
+<li>&#x9AD8;&#x80FD;&#x7269;&#x7406;<ul>
+<li>&#x6676;&#x683C;&#x89C4;&#x8303;&#x7406;&#x8BBA; Lattice gauge theories</li>
+</ul>
+</li>
+</ul>
+<h4 id="&#x63A2;&#x7A76;&#x4EC0;&#x4E48;&#x6837;&#x7684;&#x7269;&#x7406;"><a name="&#x63A2;&#x7A76;&#x4EC0;&#x4E48;&#x6837;&#x7684;&#x7269;&#x7406;" class="anchor-navigation-ex-anchor" href="#&#x63A2;&#x7A76;&#x4EC0;&#x4E48;&#x6837;&#x7684;&#x7269;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x63A2;&#x7A76;&#x4EC0;&#x4E48;&#x6837;&#x7684;&#x7269;&#x7406;</h4>
+<ul>
+<li>&#x9AD8;&#x6E29;&#x8D85;&#x5BFC; High-Tc superconductivity</li>
+<li>&#x70ED;&#x5316;&#x52A8;&#x529B;&#x5B66; Thermalization dynamics</li>
+<li>&#x62D3;&#x6251; Topology</li>
+</ul>
+<h2 id="&#x4F8B;&#x5B50;1-&#x70ED;&#x5316;&#x52A8;&#x529B;&#x5B66;&#xFF1A;&#x5C40;&#x57DF;&#x5316;"><a name="&#x4F8B;&#x5B50;1-&#x70ED;&#x5316;&#x52A8;&#x529B;&#x5B66;&#xFF1A;&#x5C40;&#x57DF;&#x5316;" class="anchor-navigation-ex-anchor" href="#&#x4F8B;&#x5B50;1-&#x70ED;&#x5316;&#x52A8;&#x529B;&#x5B66;&#xFF1A;&#x5C40;&#x57DF;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>3.1. &#x4F8B;&#x5B50;1 &#x70ED;&#x5316;&#x52A8;&#x529B;&#x5B66;&#xFF1A;&#x5C40;&#x57DF;&#x5316;</h2>
+<p>&#x95EE;&#x9898;&#xFF1A;&#x5BF9;&#x4E8E;&#x4E00;&#x4E2A;&#x5C01;&#x95ED;&#x7684;&#x91CF;&#x5B50;&#x7CFB;&#x7EDF;&#xFF0C;&#x5982;&#x679C;&#x4E00;&#x5F00;&#x59CB;&#x72B6;&#x6001;&#x662F;&#x7EAF;&#x6001;&#xFF0C;&#x90A3;&#x4E48;&#x6F14;&#x5316;&#x5230;&#x6700;&#x540E;&#x8FD8;&#x662F;&#x7EAF;&#x6001;&#x3002;&#x4F46;&#x662F;&#x70ED;&#x5E73;&#x8861;&#x7684;&#x8BDD;&#xFF0C;&#x7CFB;&#x7EDF;&#x7684;&#x6001;&#x662F;&#x6DF7;&#x6001;&#x3002;&#x6240;&#x4EE5;&#x4E00;&#x4E2A;&#x5C01;&#x95ED;&#x7684;&#x91CF;&#x5B50;&#x7CFB;&#x7EDF;&#x91CC;&#xFF0C;&#x70ED;&#x5E73;&#x8861;&#x8FD9;&#x4E2A;&#x6982;&#x5FF5;&#x5230;&#x5E95;&#x662F;&#x5982;&#x4F55;&#x51FA;&#x73B0;&#xFF1F;</p>
+<p><img src="https://jptanjing.oss-cn-beijing.aliyuncs.com/img/image-20220430141814448.png" style="zoom:50%;"></p>
+<p>&#x4E00;&#x4E9B;&#x6709;&#x8DA3;&#x7684;&#x95EE;&#x9898;</p>
+<ol>
+<li>&#x7CFB;&#x7EDF;&#x5982;&#x4F55;&#x8D8B;&#x5411;&#x4E8E;&#x5E73;&#x8861;&#xFF1F;</li>
+<li>&#x4E3A;&#x4EC0;&#x4E48;&#x8D8B;&#x5411;&#x4E8E;&#x5E73;&#x8861;&#xFF1F;</li>
+<li>&#x4EC0;&#x4E48;&#x7CFB;&#x7EDF;&#x4E0D;&#x4F1A;&#x8D8B;&#x5411;&#x4E8E;&#x70ED;&#x5E73;&#x8861;&#xFF1F;</li>
+</ol>
+<p>&#x8FD9;&#x4E9B;&#x95EE;&#x9898;&#x662F;&#x91CF;&#x5B50;&#x6A21;&#x62DF;&#x7684;&#x7528;&#x6B66;&#x4E4B;&#x5730;</p>
+<h3 id="&#x5C40;&#x57DF;&#x5316;"><a name="&#x5C40;&#x57DF;&#x5316;" class="anchor-navigation-ex-anchor" href="#&#x5C40;&#x57DF;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>3.1.1. &#x5C40;&#x57DF;&#x5316;</h3>
+<p><img src="https://jptanjing.oss-cn-beijing.aliyuncs.com/img/image-20220430142130279.png" style="zoom:50%;"></p>
+<p>&#x5355;&#x4E2A;&#x7C92;&#x5B50;&#x7684;&#x5C40;&#x57DF;&#x5316;&#x53EB; Anderson localization
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>H</mi><mo>=</mo><mi>t</mi><munder><mo>&#x2211;</mo><mrow><mo>&#x27E8;</mo><mi>i</mi><mi>j</mi><mo>&#x27E9;</mo></mrow></munder><mrow><mo fence="true">(</mo><msubsup><mi>c</mi><mi>i</mi><mo>&#x2020;</mo></msubsup><msub><mi>c</mi><mi>j</mi></msub><mo>+</mo><msubsup><mi>c</mi><mi>j</mi><mo>&#x2020;</mo></msubsup><msub><mi>c</mi><mi>i</mi></msub><mo fence="true">)</mo></mrow><mo>+</mo><munder><mo>&#x2211;</mo><mi>i</mi></munder><msub><mi>U</mi><mi>i</mi></msub><msubsup><mi>c</mi><mi>i</mi><mo>&#x2020;</mo></msubsup><msub><mi>c</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">
+H=t \sum_{\langle i j\rangle}\left(c_{i}^{\dagger} c_{j}+c_{j}^{\dagger} c_{i}\right)+\sum_{i} U_{i} c_{i}^{\dagger} c_{i}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.15em;"></span><span class="strut bottom" style="height:2.666005em;vertical-align:-1.516005em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.08125em;">H</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mord mathit">t</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.050005em;"><span style="top:-1.808995em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">&#x27E8;</span><span class="mord mathit mtight">i</span><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span><span class="mclose mtight">&#x27E9;</span></span></span></span><span style="top:-3.0500049999999996em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">&#x2211;</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:1.516005em;"></span></span></span></span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size2">(</span></span><span class="mord"><span class="mord mathit">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9670159999999998em;"><span style="top:-2.4231360000000004em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">i</span></span></span></span><span style="top:-3.180908em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">&#x2020;</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.276864em;"></span></span></span></span></span><span class="mord"><span class="mord mathit">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathit">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9670159999999999em;"><span style="top:-2.4231360000000004em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span></span></span></span><span style="top:-3.1809080000000005em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">&#x2020;</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.412972em;"></span></span></span></span></span><span class="mord"><span class="mord mathit">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">i</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size2">)</span></span></span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.0500050000000003em;"><span style="top:-1.872331em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">i</span></span></span></span><span style="top:-3.050005em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">&#x2211;</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:1.277669em;"></span></span></span></span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathit" style="margin-right:0.10903em;">U</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.10903em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">i</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span><span class="mord"><span class="mord mathit">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9670159999999998em;"><span style="top:-2.4231360000000004em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">i</span></span></span></span><span style="top:-3.180908em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">&#x2020;</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.276864em;"></span></span></span></span></span><span class="mord"><span class="mord mathit">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">i</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"></span></span></span></span></span></span></span></span></span>
+&#x5982;&#x679C;&#x539F;&#x5B50;&#x5728;&#x8FD9;&#x79CD;&#x5149;&#x52BF;&#x9631;&#x91CC;&#x8FB9;&#xFF0C;&#x5B83;&#x5F88;&#x81EA;&#x7136;&#x7684;&#x5C31;&#x6784;&#x9020;&#x4E86;&#x8FD9;&#x6837;&#x7684;&#x4E00;&#x4E2A;&#x6A21;&#x578B;&#x3002;</p>
+<p>Many-body localization
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtable><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mover accent="true"><mrow><mi>H</mi></mrow><mo>^</mo></mover><mo>=</mo></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mo>&#x2212;</mo><mi>J</mi><munder><mo>&#x2211;</mo><mrow><mi>i</mi><mo separator="true">,</mo><mi>&#x3C3;</mi></mrow></munder><mrow><mo fence="true">(</mo><msubsup><mover accent="true"><mrow><mi>c</mi></mrow><mo>^</mo></mover><mrow><mi>i</mi><mo separator="true">,</mo><mi>&#x3C3;</mi></mrow><mo>&#x2020;</mo></msubsup><msub><mover accent="true"><mrow><mi>c</mi></mrow><mo>^</mo></mover><mrow><mi>i</mi><mo>+</mo><mn>1</mn><mo separator="true">,</mo><mi>&#x3C3;</mi></mrow></msub><mo>+</mo><mtext>&#xA0;h.c.&#xA0;</mtext><mo fence="true">)</mo></mrow></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mo>+</mo><mi mathvariant="normal">&#x394;</mi><munder><mo>&#x2211;</mo><mrow><mi>i</mi><mo separator="true">,</mo><mi>&#x3C3;</mi></mrow></munder><mi>cos</mi><mo>&#x2061;</mo><mo>(</mo><mn>2</mn><mi>&#x3C0;</mi><mi>&#x3B2;</mi><mi>i</mi><mo>+</mo><mi>&#x3D5;</mi><mo>)</mo><msubsup><mover accent="true"><mrow><mi>c</mi></mrow><mo>^</mo></mover><mrow><mi>i</mi><mo separator="true">,</mo><mi>&#x3C3;</mi></mrow><mo>&#x2020;</mo></msubsup><msub><mover accent="true"><mrow><mi>c</mi></mrow><mo>^</mo></mover><mrow><mi>i</mi><mo separator="true">,</mo><mi>&#x3C3;</mi></mrow></msub><mo>+</mo><mi>U</mi><munder><mo>&#x2211;</mo><mi>i</mi></munder><msub><mover accent="true"><mrow><mi>n</mi></mrow><mo>^</mo></mover><mrow><mi>i</mi><mo separator="true">,</mo><mo>&#x2191;</mo></mrow></msub><msub><mover accent="true"><mrow><mi>n</mi></mrow><mo>^</mo></mover><mrow><mi>i</mi><mo separator="true">,</mo><mo>&#x2193;</mo></mrow></msub></mrow></mstyle></mtd></mtr></mtable></mrow><annotation encoding="application/x-tex">
+\begin{aligned}
+\hat{H}=&amp;-J \sum_{i, \sigma}\left(\hat{c}_{i, \sigma}^{\dagger} \hat{c}_{i+1, \sigma}+\text { h.c. }\right) \\
+&amp;+\Delta \sum_{i, \sigma} \cos (2 \pi \beta i+\phi) \hat{c}_{i, \sigma}^{\dagger} \hat{c}_{i, \sigma}+U \sum_{i} \hat{n}_{i, \uparrow} \hat{n}_{i, \downarrow}
+\end{aligned}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:3.0637795em;"></span><span class="strut bottom" style="height:5.627559em;vertical-align:-2.5637795em;"></span><span class="base"><span class="mord"><span class="mtable"><span class="col-align-r"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:3.0637795em;"><span style="top:-5.063779500000001em;"><span class="pstrut" style="height:3.15em;"></span><span class="mord"><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9467699999999999em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathit" style="margin-right:0.08125em;">H</span></span></span><span style="top:-3.25233em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.19444em;">^</span></span></span></span></span></span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span></span></span><span style="top:-2.2999975em;"><span class="pstrut" style="height:3.15em;"></span><span class="mord"></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:2.5637795em;"></span></span></span></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:3.0637795em;"><span style="top:-5.063779500000001em;"><span class="pstrut" style="height:3.15em;"></span><span class="mord"><span class="mord"></span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#x2212;</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord mathit" style="margin-right:0.09618em;">J</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.050005em;"><span style="top:-1.8723309999999997em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathit mtight" style="margin-right:0.03588em;">&#x3C3;</span></span></span></span><span style="top:-3.0500049999999996em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">&#x2211;</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:1.413777em;"></span></span></span></span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size2">(</span></span><span class="mord"><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.69444em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathit">c</span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.19444em;">^</span></span></span></span></span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9670159999999999em;"><span style="top:-2.4231360000000004em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathit mtight" style="margin-right:0.03588em;">&#x3C3;</span></span></span></span><span style="top:-3.1809080000000005em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">&#x2020;</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.412972em;"></span></span></span></span></span><span class="mord"><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.69444em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathit">c</span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.19444em;">^</span></span></span></span></span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">i</span><span class="mbin mtight">+</span><span class="mord mtight">1</span><span class="mpunct mtight">,</span><span class="mord mathit mtight" style="margin-right:0.03588em;">&#x3C3;</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord text"><span class="mord">&#xA0;h.c.&#xA0;</span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size2">)</span></span></span></span></span><span style="top:-2.2999975em;"><span class="pstrut" style="height:3.15em;"></span><span class="mord"><span class="mord"></span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord">&#x394;</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.050005em;"><span style="top:-1.8723309999999997em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathit mtight" style="margin-right:0.03588em;">&#x3C3;</span></span></span></span><span style="top:-3.0500049999999996em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">&#x2211;</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:1.413777em;"></span></span></span></span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mop">cos</span><span class="mopen">(</span><span class="mord">2</span><span class="mord mathit" style="margin-right:0.03588em;">&#x3C0;</span><span class="mord mathit" style="margin-right:0.05278em;">&#x3B2;</span><span class="mord mathit">i</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord mathit">&#x3D5;</span><span class="mclose">)</span><span class="mord"><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.69444em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathit">c</span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.19444em;">^</span></span></span></span></span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9670159999999999em;"><span style="top:-2.4231360000000004em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathit mtight" style="margin-right:0.03588em;">&#x3C3;</span></span></span></span><span style="top:-3.1809080000000005em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">&#x2020;</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.412972em;"></span></span></span></span></span><span class="mord"><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.69444em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathit">c</span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.19444em;">^</span></span></span></span></span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathit mtight" style="margin-right:0.03588em;">&#x3C3;</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord mathit" style="margin-right:0.10903em;">U</span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.0500050000000003em;"><span style="top:-1.872331em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">i</span></span></span></span><span style="top:-3.050005em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">&#x2211;</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:1.277669em;"></span></span></span></span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.69444em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathit">n</span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;">^</span></span></span></span></span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">i</span><span class="mpunct mtight">,</span><span class="mrel mtight">&#x2191;</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span><span class="mord"><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.69444em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathit">n</span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;">^</span></span></span></span></span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">i</span><span class="mpunct mtight">,</span><span class="mrel mtight">&#x2193;</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:2.5637795em;"></span></span></span></span></span></span></span></span></span></span></p>
+<h2 id="&#x4F8B;&#x5B50;2---&#x9ED1;&#x6D1E;"><a name="&#x4F8B;&#x5B50;2---&#x9ED1;&#x6D1E;" class="anchor-navigation-ex-anchor" href="#&#x4F8B;&#x5B50;2---&#x9ED1;&#x6D1E;"><i class="fa fa-link" aria-hidden="true"></i></a>3.2. &#x4F8B;&#x5B50;2 - &#x9ED1;&#x6D1E;</h2>
+<p>&#x9ED1;&#x6D1E;Black holes&#x88AB;&#x8BA4;&#x4E3A;&#x662F;&#x6700;&#x5FEB;&#x80FD;&#x8D8B;&#x4E8E;&#x70ED;&#x5E73;&#x8861;&#x7684;&#x7CFB;&#x7EDF;&#x3002;  &quot;fast scramblers&quot;</p>
+<ul>
+<li>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x8BBE;&#x8BA1;&#x51FA;&#x50CF;&#x8FD9;&#x6837;&#x5FEB;&#x901F;&#x70ED;&#x5E73;&#x8861;&#x7684;&#x91CF;&#x5B50;&#x7CFB;&#x7EDF;&#x5417;&#xFF1F;</li>
+<li>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7528;&#x8FD9;&#x4E2A;&#x7CFB;&#x7EDF;&#x53BB;&#x7814;&#x7A76;&#x70ED;&#x5316;&#x7684;&#x52A8;&#x529B;&#x5B66;&#x5417;&#xFF1F;</li>
+</ul>
+<h4 id="&#x79BB;&#x5B50;&#x9631;&#x6A21;&#x62DF;"><a name="&#x79BB;&#x5B50;&#x9631;&#x6A21;&#x62DF;" class="anchor-navigation-ex-anchor" href="#&#x79BB;&#x5B50;&#x9631;&#x6A21;&#x62DF;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x79BB;&#x5B50;&#x9631;&#x6A21;&#x62DF;</h4>
+<ul>
+<li>&#x79BB;&#x5B50;&#x9631;&#x65B9;&#x9762;&#x7684;&#x5B9E;&#x9A8C;&#xFF0C;&#x6784;&#x9020;&#x4E00;&#x4E2A;&#x5E7A;&#x6B63;&#x6F14;&#x5316; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>U</mi></mrow><annotation encoding="application/x-tex">U</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.10903em;">U</span></span></span></span>&#x3002;</li>
+<li>&#x518D;&#x6784;&#x9020;&#x4E00;&#x4E2A;&#x5171;&#x8F6D;&#x7684;&#x5E7A;&#x6B63;&#x6F14;&#x5316; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>U</mi><mo>&#x2217;</mo></msup></mrow><annotation encoding="application/x-tex">U^{*}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.688696em;"></span><span class="strut bottom" style="height:0.688696em;vertical-align:0em;"></span><span class="base"><span class="mord"><span class="mord mathit" style="margin-right:0.10903em;">U</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.688696em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">&#x2217;</span></span></span></span></span></span></span></span></span></span></span></span>&#x3002;</li>
+<li>&#x6574;&#x4E2A;&#x8FC7;&#x7A0B;&#x7B49;&#x6548;&#x662F; teleportation</li>
+</ul>
+<p><img src="https://jptanjing.oss-cn-beijing.aliyuncs.com/img/image-20220430203124616.png" style="zoom:50%;"></p>
+<p>&#x8FD9;&#x90E8;&#x5206;&#x548C;&#x7B2C;&#x4E00;&#x6B21;&#x8BFE;&#x7A0B;&#x5C24;&#x4EA6;&#x5E84;&#x8001;&#x5E08;&#x8BB2;&#x7684;&#x4E00;&#x6837;&#xFF0C;Alice&#x7684;&#x4FE1;&#x606F;&#x4E22;&#x8FDB;&#x9ED1;&#x6D1E;&#xFF0C;&#x901A;&#x8FC7;&#x6536;&#x96C6;&#x970D;&#x91D1;&#x8F90;&#x5C04;Hawking
+radiation&#xFF0C;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>U</mi><mo>&#x2217;</mo></msup></mrow><annotation encoding="application/x-tex">U^{*}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.688696em;"></span><span class="strut bottom" style="height:0.688696em;vertical-align:0em;"></span><span class="base"><span class="mord"><span class="mord mathit" style="margin-right:0.10903em;">U</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.688696em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">&#x2217;</span></span></span></span></span></span></span></span></span></span></span></span> &#x8FC7;&#x7A0B;&#x6709;&#x53EF;&#x80FD;&#x628A;Alice&#x7684;&#x4FE1;&#x606F;&#x590D;&#x539F;&#x51FA;&#x6765;</p>
+<p><img src="https://jptanjing.oss-cn-beijing.aliyuncs.com/img/image-20220430203151779.png" style="zoom:50%;"></p>
+<h2 id="&#x4F8B;&#x5B50;3-&#x9AD8;&#x6E29;&#x8D85;&#x5BFC;"><a name="&#x4F8B;&#x5B50;3-&#x9AD8;&#x6E29;&#x8D85;&#x5BFC;" class="anchor-navigation-ex-anchor" href="#&#x4F8B;&#x5B50;3-&#x9AD8;&#x6E29;&#x8D85;&#x5BFC;"><i class="fa fa-link" aria-hidden="true"></i></a>3.3. &#x4F8B;&#x5B50;3 &#x9AD8;&#x6E29;&#x8D85;&#x5BFC;</h2>
+<p>&#x9AD8;&#x6E29;&#x8D85;&#x5BFC;&#x7684;&#x76F8;&#x56FE; </p>
+<p><img src="https://jptanjing.oss-cn-beijing.aliyuncs.com/img/image-20220430215110869.png" style="zoom:50%;"></p>
+<p>&#x867D;&#x7136;&#x7ED3;&#x6784;&#x5F88;&#x590D;&#x6742;&#xFF0C;&#x4F46;&#x662F;&#x53EF;&#x4EE5;&#x7B49;&#x6548;&#x6210;&#x4E8C;&#x7EF4;ferimi Hubbard model</p>
+<p><img src="https://jptanjing.oss-cn-beijing.aliyuncs.com/img/image-20220430215226271.png" style="zoom:50%;"></p>
+<p>&#x5B9E;&#x9A8C;&#x4E0A;&#xFF1A;&#x7528;&#x91CF;&#x5B50;&#x5668;&#x663E;&#x5FAE;&#x955C;&#x63A2;&#x7D22;ferimi Hubbard model</p>
+<ul>
+<li>&#x6D4B;&#x91CF;&#x81EA;&#x65CB;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x8054;&#x51FD;&#x6570;</li>
+<li>&#x5404;&#x5411;&#x5F02;&#x6027;&#x8D85;&#x5BFC;</li>
+<li>&#x89C2;&#x6D4B;&#x7A7A;&#x7A74;&#x7684;&#x52A8;&#x529B;&#x5B66;&#xFF0C;&#x8FD9;&#x662F;&#x4F20;&#x7EDF;&#x51DD;&#x805A;&#x6001;&#x7CFB;&#x7EDF;&#x6CA1;&#x529E;&#x6CD5;&#x89C2;&#x6D4B;&#x5230;&#x7684;</li>
+</ul>
+<p><img src="https://jptanjing.oss-cn-beijing.aliyuncs.com/img/image-20220430215436420.png" style="zoom:50%;"></p>
+<h2 id="&#x4F8B;&#x5B50;4-&#x62D3;&#x6251;"><a name="&#x4F8B;&#x5B50;4-&#x62D3;&#x6251;" class="anchor-navigation-ex-anchor" href="#&#x4F8B;&#x5B50;4-&#x62D3;&#x6251;"><i class="fa fa-link" aria-hidden="true"></i></a>3.4. &#x4F8B;&#x5B50;4 &#x62D3;&#x6251;</h2>
+<p><img src="https://jptanjing.oss-cn-beijing.aliyuncs.com/img/image-20220514225446678.png" style="zoom:50%;"></p>
+<ol>
+<li>&#x5DE6;&#x8FB9;&#x4E24;&#x4E2A;&#x56FE;&#x662F;&#x91CF;&#x5B50;&#x970D;&#x5C14;&#x6548;&#x5E94;&#x7684;&#x5B9E;&#x9A8C;&#x793A;&#x610F;&#x56FE;&#x548C;&#x7ED3;&#x679C;&#x793A;&#x610F;&#x56FE;&#x3002;</li>
+<li>&#x53F3;&#x8FB9;&#x7684;&#x56FE;&#x662F;toric code&#x6A21;&#x578B;&#xFF0C;&#x4E00;&#x4E2A;&#x542B;&#x6709;&#x62D3;&#x6251;&#x5E8F;&#x7684;&#x6A21;&#x578B;&#x3002;</li>
+</ol>
+<p><img src="https://jptanjing.oss-cn-beijing.aliyuncs.com/img/image-20220526143545588.png" style="zoom:50%;"></p>
+<p>&#x7528;&#x8D85;&#x5BFC;&#x91CF;&#x5B50;&#x6BD4;&#x7279;&#x6A21;&#x62DF;&#x62D3;&#x6251;&#x7269;&#x6001;&#x7CFB;&#x7EDF;</p>
+<h3 id="&#x62D3;&#x6251;&#x5E8F;"><a name="&#x62D3;&#x6251;&#x5E8F;" class="anchor-navigation-ex-anchor" href="#&#x62D3;&#x6251;&#x5E8F;"><i class="fa fa-link" aria-hidden="true"></i></a>3.4.1. &#x62D3;&#x6251;&#x5E8F;</h3>
+<p>2021&#x5E74;&#x7684;&#x4E24;&#x4E2A;&#x5728;&#x62D3;&#x6251;&#x5E8F;&#x65B9;&#x9762;&#x7684;&#x7814;&#x7A76;</p>
+<ol>
+<li>&#x54C8;&#x4F5B;&#x7EC4;&#x7528;&#x91CC;&#x5FB7;&#x5821;&#x539F;&#x5B50;&#x6A21;&#x62DF;&#x4E86; toric code&#x5F62;&#x5F0F;&#x7684;&#x91CF;&#x5B50;&#x81EA;&#x65CB;&#x6DB2;&#x4F53;  <a href="https://www.science.org/doi/10.1126/science.abi8794" target="_blank">DOI: 10.1126/science.abi8794</a></li>
+<li>&#x8C37;&#x6B4C;&#x7684;&#x7814;&#x7A76;&#x7EC4;&#x7528;&#x8D85;&#x5BFC;&#x6A21;&#x62DF;&#x4E86; toric code <a href="https://www.science.org/doi/10.1126/science.abi8378" target="_blank">DOI: 10.1126/science.abi8378</a></li>
+</ol>
+<p><img src="https://jptanjing.oss-cn-beijing.aliyuncs.com/img/image-20220514225831544.png" alt="image-20220514225831544"></p>
+<h1 id="&#x672A;&#x6765;&#x53D1;&#x5C55;"><a name="&#x672A;&#x6765;&#x53D1;&#x5C55;" class="anchor-navigation-ex-anchor" href="#&#x672A;&#x6765;&#x53D1;&#x5C55;"><i class="fa fa-link" aria-hidden="true"></i></a>4. &#x672A;&#x6765;&#x53D1;&#x5C55;</h1>
+<p>&#x7C7B;&#x6BD4;&#x7535;&#x5B50;&#x8BA1;&#x7B97;&#x673A;&#x53D1;&#x5C55;&#x5386;&#x7A0B;&#xFF1A;</p>
+<p><img src="https://jptanjing.oss-cn-beijing.aliyuncs.com/img/image-20220526144448664.png" style="zoom:50%;"></p>
+<p>&#x4EBA;&#x7C7B;&#x6CA1;&#x6709;&#x7535;&#x5B50;&#x8BA1;&#x7B97;&#x673A;&#x4E4B;&#x524D;&#xFF0C;&#x6784;&#x9020;&#x8FD9;&#x79CD;&#x975E;&#x5E38;&#x590D;&#x6742;&#x7684;&#x8FD9;&#x4E2A;&#x8FD9;&#x4E2A;&#x673A;&#x5668;&#x6765;&#x5E72;&#x9884;&#x6D4B;&#x6F6E;&#x6C50;&#xFF0C;</p>
+<ul>
+<li>&#x8FD9;&#x79CD;&#x6A21;&#x62DF;&#x8BA1;&#x7B97;&#x673A;&#x7684;&#x4E00;&#x4E2A;&#x7F3A;&#x70B9;&#x662F;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x662F;&#x4E00;&#x4E2A;&#x8FDE;&#x7EED;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x6240;&#x4EE5;&#x8BEF;&#x5DEE;&#x4F1A;&#x7D2F;&#x79EF;</li>
+</ul>
+<p>&#x5BF9;&#x4E8E;&#x6570;&#x5B57;&#x7684;&#x8BA1;&#x7B97;&#x673A;&#xFF0C;&#x80FD;&#x7528;&#x7EA0;&#x9519;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x628A;&#x566A;&#x97F3;&#x7ED9;&#x53D6;&#x6D88;&#x6389;&#x3002;&#x7C7B;&#x4F3C;&#x7684;&#xFF0C;&#x5728;&#x91CF;&#x5B50;&#x8BA1;&#x7B97;&#x4E2D;&#x4E5F;&#x8FDB;&#x884C;&#x7EA0;&#x9519;&#xFF08;Fault-Tolerant Quantum Computation&#xFF09;&#x3002;&#x63A5;&#x4E0B;&#x6765;&#x4EE5;Hamiltonian Simulation&#x4E3A;&#x4F8B;&#x5B50;&#x8BF4;&#x660E;&#x4E00;&#x4E0B;</p>
+<h3 id="hamiltonian-simulation"><a name="hamiltonian-simulation" class="anchor-navigation-ex-anchor" href="#hamiltonian-simulation"><i class="fa fa-link" aria-hidden="true"></i></a>4.1.1. Hamiltonian Simulation</h3>
+<p>Trotter formula&#x65B9;&#x6CD5;&#xFF1A;&#x628A;&#x54C8;&#x5BC6;&#x987F;&#x91CF;&#x62C6;&#x89E3;&#x6210;&#x591A;&#x9879;
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>H</mi><mo>=</mo><mi>A</mi><mo>+</mo><mi>B</mi><mo>+</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">
+H=A+B+C
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.08125em;">H</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mord mathit">A</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord mathit" style="margin-right:0.07153em;">C</span></span></span></span></span></p>
+<p>&#x56E0;&#x4E3A;&#x7B97;&#x7B26;&#x6709;&#x5BF9;&#x6613;&#x95EE;&#x9898;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x80FD;&#x968F;&#x4FBF;&#x5199;&#x6210;&#x4E0B;&#x9762;&#x7684;&#x5F62;&#x5F0F;&#xFF0C;&#x4F46;&#x662F;&#x5982;&#x679C;&#x62C6;&#x89E3;&#x6210;&#x9879;&#x6570;&#x8DB3;&#x591F;&#x591A;&#xFF0C;&#x53EF;&#x4EE5;&#x8BA9;&#x8BEF;&#x5DEE;&#x6BD4;&#x8F83;&#x5C0F;&#xFF0C;&#x90A3;&#x4E48;&#x6F14;&#x5316;&#x53EF;&#x4EE5;&#x5199;&#x6210;&#x4E0B;&#x9762;&#x7684;&#x5F62;&#x5F0F;
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>U</mi><mo>=</mo><msup><mi>e</mi><mrow><mo>&#x2212;</mo><mi>i</mi><mo>(</mo><mi>A</mi><mo>+</mo><mi>B</mi><mo>+</mo><mi>C</mi><mo>)</mo><mi>t</mi></mrow></msup><mo>=</mo><msup><mrow><mo fence="true">(</mo><msup><mi>e</mi><mrow><mo>&#x2212;</mo><mi>i</mi><mi>A</mi><mi>t</mi><mi mathvariant="normal">/</mi><mi>r</mi></mrow></msup><msup><mi>e</mi><mrow><mo>&#x2212;</mo><mi>i</mi><mi>B</mi><mi>t</mi><mi mathvariant="normal">/</mi><mi>r</mi></mrow></msup><msup><mi>e</mi><mrow><mo>&#x2212;</mo><mi>i</mi><mi>C</mi><mi>t</mi><mi mathvariant="normal">/</mi><mi>r</mi></mrow></msup><mo fence="true">)</mo></mrow><mi>r</mi></msup></mrow><annotation encoding="application/x-tex">
+U=e^{-i(A+B+C) t}=\left(e^{-i A t / r} e^{-i B t / r} e^{-i C t / r}\right)^{r}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.204292em;"></span><span class="strut bottom" style="height:1.854312em;vertical-align:-0.65002em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.10903em;">U</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mord"><span class="mord mathit">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.938em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">&#x2212;</span><span class="mord mathit mtight">i</span><span class="mopen mtight">(</span><span class="mord mathit mtight">A</span><span class="mbin mtight">+</span><span class="mord mathit mtight" style="margin-right:0.05017em;">B</span><span class="mbin mtight">+</span><span class="mord mathit mtight" style="margin-right:0.07153em;">C</span><span class="mclose mtight">)</span><span class="mord mathit mtight">t</span></span></span></span></span></span></span></span></span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="minner"><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size2">(</span></span><span class="mord"><span class="mord mathit">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.938em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">&#x2212;</span><span class="mord mathit mtight">i</span><span class="mord mathit mtight">A</span><span class="mord mathit mtight">t</span><span class="mord mtight">/</span><span class="mord mathit mtight" style="margin-right:0.02778em;">r</span></span></span></span></span></span></span></span></span><span class="mord"><span class="mord mathit">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.938em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">&#x2212;</span><span class="mord mathit mtight">i</span><span class="mord mathit mtight" style="margin-right:0.05017em;">B</span><span class="mord mathit mtight">t</span><span class="mord mtight">/</span><span class="mord mathit mtight" style="margin-right:0.02778em;">r</span></span></span></span></span></span></span></span></span><span class="mord"><span class="mord mathit">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.938em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">&#x2212;</span><span class="mord mathit mtight">i</span><span class="mord mathit mtight" style="margin-right:0.07153em;">C</span><span class="mord mathit mtight">t</span><span class="mord mtight">/</span><span class="mord mathit mtight" style="margin-right:0.02778em;">r</span></span></span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size2">)</span></span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:1.204292em;"><span style="top:-3.6029em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.02778em;">r</span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p>&#x628A;&#x6F14;&#x5316;&#x7B97;&#x7B26; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>U</mi></mrow><annotation encoding="application/x-tex">U</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.10903em;">U</span></span></span></span> &#x62C6;&#x89E3;&#x6210;&#x591A;&#x4E2A;&#x5E7A;&#x6B63;&#x7B97;&#x7B26;&#x7684;&#x7EBF;&#x6027;&#x53E0;&#x52A0;(Linear combination of unitaries)
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>U</mi><mo>=</mo><munder><mo>&#x2211;</mo><mi>j</mi></munder><msub><mi>&#x3B2;</mi><mi>j</mi></msub><msub><mi>V</mi><mi>j</mi></msub></mrow><annotation encoding="application/x-tex">
+U=\sum_{j} \beta_{j} V_{j}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.050005em;"></span><span class="strut bottom" style="height:2.463782em;vertical-align:-1.413777em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.10903em;">U</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.050005em;"><span style="top:-1.8723309999999997em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span></span></span></span><span style="top:-3.0500049999999996em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">&#x2211;</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:1.413777em;"></span></span></span></span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathit" style="margin-right:0.05278em;">&#x3B2;</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:-0.05278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span><span class="mord"><span class="mord mathit" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"></span></span></span></span></span></span></span></span></span></p>
+<p>&#x7528;&#x8FD9;&#x4E9B;&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x91CF;&#x5B50;&#x5316;&#x5B66;&#x7684;&#x6A21;&#x62DF;&#xFF0C;&#x5177;&#x4F53;&#x7684;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#x6BD4;&#x5982;&#x201C;&#x6C2E;&#x56FA;&#x5316;&#x201D; &#xFF08;Elucidating reaction mechanisms on quantum computers <a href="https://doi.org/10.1073/pnas.1619152114" target="_blank">https://doi.org/10.1073/pnas.1619152114</a> &#xFF09;</p>
+<p><img src="https://jptanjing.oss-cn-beijing.aliyuncs.com/img/image-20220526145837310.png" alt="image-20220526145837310"></p>
+<h3 id="quantum-phase-estimation"><a name="quantum-phase-estimation" class="anchor-navigation-ex-anchor" href="#quantum-phase-estimation"><i class="fa fa-link" aria-hidden="true"></i></a>4.1.2. Quantum Phase Estimation</h3>
+<p>&#x5229;&#x7528;Quantum Phase Estimation&#x8BA1;&#x7B97;&#x7CFB;&#x7EDF;&#x7684;&#x80FD;&#x8C31;&#x3002;&#x800C;&#x57FA;&#x6001;&#x80FD;&#x91CF;&#x662F;&#x5316;&#x5B66;&#x7814;&#x7A76;&#x4E2D;&#x975E;&#x5E38;&#x53D7;&#x5173;&#x6CE8;&#x7684;&#x4E00;&#x4E2A;&#x4E1C;&#x897F;&#x3002;
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtable><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow><mo fence="true">&#x2223;</mo><msup><mn>0</mn><mi>m</mi></msup><mo fence="true">&#x27E9;</mo></mrow><mi mathvariant="normal">&#x2223;</mi><mi>&#x3C8;</mi><mo>&#x27E9;</mo></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mstyle><mover><mo><mo>&#x27F6;</mo></mo><msup><mi>H</mi><mrow><mo>&#x2297;</mo><mi>m</mi></mrow></msup></mover></mstyle><mrow><mo fence="true">(</mo><mfrac><mrow><mn>1</mn></mrow><mrow><msqrt><mrow><mi>M</mi></mrow></msqrt></mrow></mfrac><munderover><mo>&#x2211;</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>M</mi><mo>&#x2212;</mo><mn>1</mn></mrow></munderover><mi mathvariant="normal">&#x2223;</mi><mi>k</mi><mo>&#x27E9;</mo><mo fence="true">)</mo></mrow><mo>&#x2297;</mo><mi mathvariant="normal">&#x2223;</mi><mi>&#x3C8;</mi><mo>&#x27E9;</mo></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mstyle><mover><mo><mo>&#x27F6;</mo></mo><mrow><msub><mi>C</mi><mi>m</mi></msub><mo>&#x2212;</mo><mi>U</mi></mrow></mover></mstyle></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mrow><mo fence="true">(</mo><mfrac><mrow><mn>1</mn></mrow><mrow><msqrt><mrow><mi>M</mi></mrow></msqrt></mrow></mfrac><munderover><mo>&#x2211;</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>M</mi><mo>&#x2212;</mo><mn>1</mn></mrow></munderover><msup><mi>&#x3BB;</mi><mi>k</mi></msup><mi mathvariant="normal">&#x2223;</mi><mi>k</mi><mo>&#x27E9;</mo><mo fence="true">)</mo></mrow><mo>&#x2297;</mo><mi mathvariant="normal">&#x2223;</mi><mi>&#x3C8;</mi><mo>&#x27E9;</mo></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mo>=</mo><mrow><mo fence="true">(</mo><mfrac><mrow><mn>1</mn></mrow><mrow><msqrt><mrow><mi>M</mi></mrow></msqrt></mrow></mfrac><munderover><mo>&#x2211;</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>M</mi><mo>&#x2212;</mo><mn>1</mn></mrow></munderover><msubsup><mi>w</mi><mi>M</mi><mrow><mi>j</mi><mi>k</mi></mrow></msubsup><mi mathvariant="normal">&#x2223;</mi><mi>k</mi><mo>&#x27E9;</mo><mo fence="true">)</mo></mrow><mo>&#x2297;</mo><mi mathvariant="normal">&#x2223;</mi><mi>&#x3C8;</mi><mo>&#x27E9;</mo></mrow></mstyle></mtd></mtr></mtable></mrow><annotation encoding="application/x-tex">
+\begin{aligned}
+\left|0^{m}\right\rangle|\psi\rangle &amp; \stackrel{H^{\otimes m}}{\longrightarrow}\left(\frac{1}{\sqrt{M}} \sum_{k=0}^{M-1}|k\rangle\right) \otimes|\psi\rangle \\
+\stackrel{C_{m}-U}{\longrightarrow} &amp;\left(\frac{1}{\sqrt{M}} \sum_{k=0}^{M-1} \lambda^{k}|k\rangle\right) \otimes|\psi\rangle \\
+&amp;=\left(\frac{1}{\sqrt{M}} \sum_{k=0}^{M-1} w_{M}^{j k}|k\rangle\right) \otimes|\psi\rangle
+\end{aligned}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:5.395673500000001em;"></span><span class="strut bottom" style="height:10.291347000000002em;vertical-align:-4.8956735em;"></span><span class="base"><span class="mord"><span class="mtable"><span class="col-align-r"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:5.395673500000001em;"><span style="top:-7.395673500000001em;"><span class="pstrut" style="height:3.828336em;"></span><span class="mord"><span class="minner"><span class="mopen delimcenter" style="top:0em;">&#x2223;</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7143919999999999em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">m</span></span></span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;">&#x27E9;</span></span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord">&#x2223;</span><span class="mord mathit" style="margin-right:0.03588em;">&#x3C8;</span><span class="mclose">&#x27E9;</span></span></span><span style="top:-3.9652245000000006em;"><span class="pstrut" style="height:3.828336em;"></span><span class="mord"><span class="mrel"><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3004310000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop">&#x27F6;</span></span></span><span style="top:-3.7220999999999997em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.16454285714285719em;"><span style="top:-2.357em;margin-left:-0.07153em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathit mtight">m</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"></span></span></span></span></span><span class="mbin mtight">&#x2212;</span><span class="mord mathit mtight" style="margin-right:0.10903em;">U</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.011em;"></span></span></span></span></span></span></span><span style="top:-0.5347755000000003em;"><span class="pstrut" style="height:3.828336em;"></span><span class="mord"></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:4.8956735em;"></span></span></span></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:5.395673500000001em;"><span style="top:-7.395673500000001em;"><span class="pstrut" style="height:3.828336em;"></span><span class="mord"><span class="mord"></span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mrel"><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4043650000000003em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop">&#x27F6;</span></span></span><span style="top:-3.7110000000000003em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8476642857142858em;"><span style="top:-2.931em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">&#x2297;</span><span class="mord mathit mtight">m</span></span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.011em;"></span></span></span></span></span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size4">(</span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.1833349999999996em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9266650000000001em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord mathit" style="margin-right:0.10903em;">M</span></span></span><span style="top:-2.886665em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg width="400em" height="1.08em" viewbox="0 0 400000 1080" preserveaspectratio="xMinYMin slice"><path d="M95,702c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,
+-10,-9.5,-14c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54c44.2,-33.3,65.8,
+-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10s173,378,173,378c0.7,0,
+35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429c69,-144,104.5,-217.7,106.5,
+-221c5.3,-9.3,12,-14,20,-14H400000v40H845.2724s-225.272,467,-225.272,467
+s-235,486,-235,486c-2.7,4.7,-9,7,-19,7c-6,0,-10,-1,-12,-3s-194,-422,-194,-422
+s-65,47,-65,47z M834 80H400000v40H845z"/></svg></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.11333499999999996em;"></span></span></span></span></span></span><span style="top:-3.15em;"><span class="pstrut" style="height:3em;"></span><span class="stretchy" style="height:0.2em;"><svg width="400em" height="0.2em" viewbox="0 0 400000 200" preserveaspectratio="xMinYMin slice"><path d="M0 80H400000 v40H0z M0 80H400000 v40H0z"/></svg></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.93em;"></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.8283360000000002em;"><span style="top:-1.8478869999999998em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.03148em;">k</span><span class="mrel mtight">=</span><span class="mord mtight">0</span></span></span></span><span style="top:-3.0500049999999996em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">&#x2211;</span></span></span><span style="top:-4.300005em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.10903em;">M</span><span class="mbin mtight">&#x2212;</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:1.302113em;"></span></span></span></span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord">&#x2223;</span><span class="mord mathit" style="margin-right:0.03148em;">k</span><span class="mclose">&#x27E9;</span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size4">)</span></span></span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#x2297;</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord">&#x2223;</span><span class="mord mathit" style="margin-right:0.03588em;">&#x3C8;</span><span class="mclose">&#x27E9;</span></span></span><span style="top:-3.9652245000000006em;"><span class="pstrut" style="height:3.828336em;"></span><span class="mord"><span class="mord"></span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size4">(</span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.1833349999999996em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9266650000000001em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord mathit" style="margin-right:0.10903em;">M</span></span></span><span style="top:-2.886665em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg width="400em" height="1.08em" viewbox="0 0 400000 1080" preserveaspectratio="xMinYMin slice"><path d="M95,702c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,
+-10,-9.5,-14c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54c44.2,-33.3,65.8,
+-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10s173,378,173,378c0.7,0,
+35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429c69,-144,104.5,-217.7,106.5,
+-221c5.3,-9.3,12,-14,20,-14H400000v40H845.2724s-225.272,467,-225.272,467
+s-235,486,-235,486c-2.7,4.7,-9,7,-19,7c-6,0,-10,-1,-12,-3s-194,-422,-194,-422
+s-65,47,-65,47z M834 80H400000v40H845z"/></svg></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.11333499999999996em;"></span></span></span></span></span></span><span style="top:-3.15em;"><span class="pstrut" style="height:3em;"></span><span class="stretchy" style="height:0.2em;"><svg width="400em" height="0.2em" viewbox="0 0 400000 200" preserveaspectratio="xMinYMin slice"><path d="M0 80H400000 v40H0z M0 80H400000 v40H0z"/></svg></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.93em;"></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.8283360000000002em;"><span style="top:-1.8478869999999998em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.03148em;">k</span><span class="mrel mtight">=</span><span class="mord mtight">0</span></span></span></span><span style="top:-3.0500049999999996em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">&#x2211;</span></span></span><span style="top:-4.300005em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.10903em;">M</span><span class="mbin mtight">&#x2212;</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:1.302113em;"></span></span></span></span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathit">&#x3BB;</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8991079999999999em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.03148em;">k</span></span></span></span></span></span></span></span></span><span class="mord">&#x2223;</span><span class="mord mathit" style="margin-right:0.03148em;">k</span><span class="mclose">&#x27E9;</span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size4">)</span></span></span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#x2297;</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord">&#x2223;</span><span class="mord mathit" style="margin-right:0.03588em;">&#x3C8;</span><span class="mclose">&#x27E9;</span></span></span><span style="top:-0.5347755000000003em;"><span class="pstrut" style="height:3.828336em;"></span><span class="mord"><span class="mord"></span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mord rule" style="margin-right:0.2777777777777778em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size4">(</span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.1833349999999996em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9266650000000001em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord mathit" style="margin-right:0.10903em;">M</span></span></span><span style="top:-2.886665em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg width="400em" height="1.08em" viewbox="0 0 400000 1080" preserveaspectratio="xMinYMin slice"><path d="M95,702c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,
+-10,-9.5,-14c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54c44.2,-33.3,65.8,
+-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10s173,378,173,378c0.7,0,
+35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429c69,-144,104.5,-217.7,106.5,
+-221c5.3,-9.3,12,-14,20,-14H400000v40H845.2724s-225.272,467,-225.272,467
+s-235,486,-235,486c-2.7,4.7,-9,7,-19,7c-6,0,-10,-1,-12,-3s-194,-422,-194,-422
+s-65,47,-65,47z M834 80H400000v40H845z"/></svg></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.11333499999999996em;"></span></span></span></span></span></span><span style="top:-3.15em;"><span class="pstrut" style="height:3em;"></span><span class="stretchy" style="height:0.2em;"><svg width="400em" height="0.2em" viewbox="0 0 400000 200" preserveaspectratio="xMinYMin slice"><path d="M0 80H400000 v40H0z M0 80H400000 v40H0z"/></svg></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.93em;"></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.8283360000000002em;"><span style="top:-1.8478869999999998em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.03148em;">k</span><span class="mrel mtight">=</span><span class="mord mtight">0</span></span></span></span><span style="top:-3.0500049999999996em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">&#x2211;</span></span></span><span style="top:-4.300005em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.10903em;">M</span><span class="mbin mtight">&#x2212;</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:1.302113em;"></span></span></span></span><span class="mord rule" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathit" style="margin-right:0.02691em;">w</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9670159999999998em;"><span style="top:-2.4064690000000004em;margin-left:-0.02691em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.10903em;">M</span></span></span></span><span style="top:-3.180908em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight" style="margin-right:0.05724em;">j</span><span class="mord mathit mtight" style="margin-right:0.03148em;">k</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.293531em;"></span></span></span></span></span><span class="mord">&#x2223;</span><span class="mord mathit" style="margin-right:0.03148em;">k</span><span class="mclose">&#x27E9;</span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size4">)</span></span></span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#x2297;</span><span class="mord rule" style="margin-right:0.2222222222222222em;"></span><span class="mord">&#x2223;</span><span class="mord mathit" style="margin-right:0.03588em;">&#x3C8;</span><span class="mclose">&#x27E9;</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:4.8956735em;"></span></span></span></span></span></span></span></span></span></span></p>
+<h2 id="&#x7ED3;&#x8BBA;"><a name="&#x7ED3;&#x8BBA;" class="anchor-navigation-ex-anchor" href="#&#x7ED3;&#x8BBA;"><i class="fa fa-link" aria-hidden="true"></i></a>4.2. &#x7ED3;&#x8BBA;</h2>
+<p>&#x672C;&#x6B21;&#x6F14;&#x8BB2;&#x7B80;&#x5355;&#x4ECB;&#x7ECD;&#x4E86;&#x91CF;&#x5B50;&#x6A21;&#x62DF;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x548C;&#x5B9E;&#x9A8C;&#x4E0A;&#x7684;&#x65B9;&#x6848;&#xFF0C;&#x6700;&#x540E;&#x662F;&#x4E00;&#x4E9B;&#x5E94;&#x7528;&#x3002;</p>
+<p>&#x4ECE;&#x957F;&#x8FDC;&#x6765;&#x8BB2;&#x4EBA;&#x4EEC;&#x53EF;&#x80FD;&#x4F1A;&#x505A;&#x7684;&#x4E00;&#x4E9B;&#x66F4;&#x504F;&#x6570;&#x5B57;&#x91CF;&#x5B50;&#x6A21;&#x62DF;&#x7684;&#x5DE5;&#x4F5C;&#x3002;</p>
+<h1 id="&#x9644;&#x5F55;&#xFF1A;&#x76F8;&#x5173;&#x8D44;&#x6E90;"><a name="&#x9644;&#x5F55;&#xFF1A;&#x76F8;&#x5173;&#x8D44;&#x6E90;" class="anchor-navigation-ex-anchor" href="#&#x9644;&#x5F55;&#xFF1A;&#x76F8;&#x5173;&#x8D44;&#x6E90;"><i class="fa fa-link" aria-hidden="true"></i></a>5. &#x9644;&#x5F55;&#xFF1A;&#x76F8;&#x5173;&#x8D44;&#x6E90;</h1>
+<ol>
+<li><p>&#x8D39;&#x66FC;(Richard Feynman)&#x6700;&#x65E9;&#x63D0;&#x51FA;&#x7684;&#x57FA;&#x672C;&#x60F3;&#x6CD5; </p>
+<ul>
+<li>Simulating Physics with Computers <a href="http://www.cs.berkeley.edu/~christos/classics/Feynman.pdf" target="_blank">http://www.cs.berkeley.edu/~christos/classics/Feynman.pdf</a>&quot;, International Journal of Theoretical Physics, volume 21, 1982, p. 467-488, at p. 486</li>
+</ul>
+</li>
+<li>&#x51B7;&#x539F;&#x5B50; Cold atoms &#x4E3B;&#x8981;&#x53C2;&#x8003; Quantum simulations with ultracold atoms in optical lattices<ul>
+<li><a href="https://doi.org/10.1126/science.aal3837" target="_blank">DOI: 10.1126/science.aal3837</a></li>
+</ul>
+</li>
+<li>&#x79BB;&#x5B50;&#x9631; Trapped ions &#x4E3B;&#x8981;&#x53C2;&#x8003;&#xFF1A;Programmable Quantum Simulations of Spin Systems with Trapped Ions<ul>
+<li>Rev. Mod. Phys. <strong>93</strong>, 025001(2021) </li>
+<li><a href="https://arxiv.org/abs/1912.07845" target="_blank">arxiv &#x94FE;&#x63A5;</a> </li>
+</ul>
+</li>
+<li>&#x91CF;&#x5B50;&#x6A21;&#x62DF;&#x5728;&#x62D3;&#x6251;&#x5E8F;&#x65B9;&#x9762;&#x7684;&#x5E94;&#x7528;<ul>
+<li>&#x54C8;&#x4F5B;&#x7EC4;&#x7528;&#x91CC;&#x5FB7;&#x5821;&#x539F;&#x5B50;&#x6A21;&#x62DF;&#x4E86; toric code&#x5F62;&#x5F0F;&#x7684;&#x91CF;&#x5B50;&#x81EA;&#x65CB;&#x6DB2;&#x4F53;  <a href="https://www.science.org/doi/10.1126/science.abi8794" target="_blank">DOI: 10.1126/science.abi8794</a></li>
+<li>&#x8C37;&#x6B4C;&#x7684;&#x7814;&#x7A76;&#x7EC4;&#x7528;&#x8D85;&#x5BFC;&#x6A21;&#x62DF;&#x4E86; toric code <a href="https://www.science.org/doi/10.1126/science.abi8378" target="_blank">DOI: 10.1126/science.abi8378</a></li>
+</ul>
+</li>
+<li>&#x91CF;&#x5B50;&#x6A21;&#x62DF;&#x5728;&#x91CF;&#x5B50;&#x5316;&#x5B66;&#x7684;&#x5E94;&#x7528;&#xFF0C;&#x5177;&#x4F53;&#x7684;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#x201C;&#x6C2E;&#x56FA;&#x5316;&#x201D; &#xFF08;Elucidating reaction mechanisms on quantum computers <a href="https://doi.org/10.1073/pnas.1619152114" target="_blank">https://doi.org/10.1073/pnas.1619152114</a> &#xFF09;</li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../Chapter07/Chapter07.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 07光量子信息处理">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"08量子模拟","level":"1.9","depth":1,"previous":{"title":"07光量子信息处理","level":"1.8","depth":1,"path":"Chapter07/Chapter07.md","ref":"Chapter07/Chapter07.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex-plus","theme-comscore","anchor-navigation-ex","toc","-lunr","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"toc":{},"search":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"theme-comscore":{},"katex-plus":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"JP","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Sample GitBook","gitbook":"*","description":"welcome to my land","extension":null},"file":{"path":"Chapter08/Chapter08.md","mtime":"2022-06-03T13:12:45.241Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-06-03T14:23:34.875Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
