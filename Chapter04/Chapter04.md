@@ -12,7 +12,7 @@
 
 **个人主页:** http://www.hongyehu.com/
 
-**记录人：**黄清扬；庄嘉培
+**记录人：**庄嘉培
 
 
 
@@ -550,21 +550,19 @@ $$
 如果现在给你一个新的哈密顿量，这个哈密顿量基态的classical shadows红色的点表示，这个红色的点在哪里？也就是说classical shadows是什么样的？
 
 > classical shadows例子
->
-> 1-对每个点的量子比特测量，得到
-> $$
-> \left|s_{i}^{(t)}\right\rangle \in\{|0\rangle,|1\rangle,|+\rangle,|-\rangle,|+i\rangle,|-i\rangle\}
-> $$
-> 2-构建泡利算子
-> $$
-> \sigma_{i}^{(t)}=3\left|s_{i}^{(t)}\right\rangle\left\langle s_{i}^{(t)}\right|- I
-> $$
-> 3-把算子直积得到classical shadows
-> $$
-> \sigma_{T}(\rho)=\frac{1}{T} \sum_{t=1}^{T} \sigma_{1}^{(t)} \otimes \cdots \otimes \sigma_{n}^{(t)}
-> $$
 
-
+1-对每个点的量子比特测量，得到
+$$
+\left|s_{i}^{(t)}\right\rangle \in\{|0\rangle,|1\rangle,|+\rangle,|-\rangle,|+i\rangle,|-i\rangle\}
+$$
+2-构建泡利算子
+$$
+\sigma_{i}^{(t)}=3\left|s_{i}^{(t)}\right\rangle\left\langle s_{i}^{(t)}\right|- I
+$$
+3-把算子直积得到classical shadows
+$$
+\sigma_{T}(\rho)=\frac{1}{T} \sum_{t=1}^{T} \sigma_{1}^{(t)} \otimes \cdots \otimes \sigma_{n}^{(t)}
+$$
 
 ## 核模型
 

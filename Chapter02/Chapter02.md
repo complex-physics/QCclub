@@ -203,21 +203,23 @@ $$
 $$
 
 > 补充笔记
-> $$
-> X|0\rangle=\left[\begin{array}{ll}
-> 0 & 1 \\
-> 1 & 0
-> \end{array}\right]\left[\begin{array}{l}
-> 1 \\
-> 0
-> \end{array}\right]=\left[\begin{array}{l}
-> 0 \\
-> 1
-> \end{array}\right]=|1\rangle
-> $$
-> 前后翻转了 $X|0\rangle=|1\rangle$
 
+$$
+X|0\rangle=\left[\begin{array}{ll}
+0 & 1 \\
+1 & 0
+\end{array}\right]\left[\begin{array}{l}
+1 \\
+0
+\end{array}\right]=\left[\begin{array}{l}
+0 \\
+1
+\end{array}\right]=|1\rangle
+$$
 
+前后翻转了 $X|0\rangle=|1\rangle$
+
+> 补充笔记结束
 
 ### 控制非门
 
@@ -546,18 +548,20 @@ Deutsch-Josza算法是Deutsch算法的推广，
 1. 对第一位的初始态 $|0\rangle$ 作用一个Hadamard门。输出 $\frac{|0\rangle+|1\rangle}{\sqrt{2}}$
 2. 第一位输出的$\frac{|0\rangle+|1\rangle}{\sqrt{2}}$ 和第二位的初始态 $|0\rangle$  一起被 一个作用于两个量子位的幺正运算输出 $U_{f}|x, y\rangle=|x, y \otimes f(x)\rangle$
 
+
+
 > 补充笔记
->
-> 这里用到了一个作用于两个量子位的幺正运算$U_{f}$
-> $$
-> U_{f}|x, y\rangle=|x, y \otimes f(x)\rangle
-> $$
-> 这个门的作用是
->
-> - 第一位的量子比特保持不变
-> - 第二位量子比特 $y $ 和函数产生新的输出 $y \otimes f(x)$
->
-> 
+
+这里用到了一个作用于两个量子位的幺正运算$U_{f}$
+$$
+U_{f}|x, y\rangle=|x, y \otimes f(x)\rangle
+$$
+这个门的作用是
+
+- 第一位的量子比特保持不变
+- 第二位量子比特 $y $ 和函数产生新的输出 $y \otimes f(x)$
+
+> 补充笔记结束
 
 假如 $f(x)$ 是恒等函数，过程计算如下
 $$
@@ -655,21 +659,21 @@ $$
 \end{aligned}
 $$
 
-> $$
-> \begin{aligned}
-> \left|\psi^{\prime}\right\rangle=&\frac{1}{\sqrt{2^{n}}} \sum_{x \in\{0,1\}^{n}}|x\rangle\left(\frac{|0\rangle-|1\rangle}{\sqrt{2}}\right)\\
-> =&\frac{1}{\sqrt{2^{2}}} \sum_{x \in\{0,1\}^{2}}|x\rangle\left(\frac{|0\rangle-|1\rangle}{\sqrt{2}}\right)\\
-> =&\frac{1}{2\sqrt{2}} \sum_{x \in\{0,1\}^{2}}|x\rangle\left(|0\rangle-|1\rangle\right)\\
-> =&\frac{1}{2\sqrt{2}} \sum_{x \in\{0,1\}^{2}}|x\rangle\left(|0\rangle-|1\rangle\right)
-> \end{aligned}
-> $$
->
-> 求和的 $x \in\{0,1\}^{2}$ 可能性包含
->
-> - $|x\rangle=|00\rangle$ 
-> - $|x\rangle=|01\rangle$ 
-> - $|x\rangle=|10\rangle$ 
-> - $|x\rangle=|11\rangle$ 
+$$
+\begin{aligned}
+\left|\psi^{\prime}\right\rangle=&\frac{1}{\sqrt{2^{n}}} \sum_{x \in\{0,1\}^{n}}|x\rangle\left(\frac{|0\rangle-|1\rangle}{\sqrt{2}}\right)\\
+=&\frac{1}{\sqrt{2^{2}}} \sum_{x \in\{0,1\}^{2}}|x\rangle\left(\frac{|0\rangle-|1\rangle}{\sqrt{2}}\right)\\
+=&\frac{1}{2\sqrt{2}} \sum_{x \in\{0,1\}^{2}}|x\rangle\left(|0\rangle-|1\rangle\right)\\
+=&\frac{1}{2\sqrt{2}} \sum_{x \in\{0,1\}^{2}}|x\rangle\left(|0\rangle-|1\rangle\right)
+\end{aligned}
+$$
+
+求和的 $x \in\{0,1\}^{2}$ 可能性包含
+
+- $|x\rangle=|00\rangle$ 
+- $|x\rangle=|01\rangle$ 
+- $|x\rangle=|10\rangle$ 
+- $|x\rangle=|11\rangle$ 
 
 运用 $U_{f}$ 门作用到上面的态上
 $$
@@ -682,36 +686,39 @@ $$
 其中第二步用到逻辑关系 $f(x)=1 .$ 
 
 > 补充过程
-> $$
-> \left|\psi^{\prime \prime}\right\rangle=\frac{1}{\sqrt{2^{n}}} \sum_{x}(-1)^{f(x)}|x\rangle\left(\frac{|0\rangle-|1\rangle}{\sqrt{2}}\right)
-> $$
->
-> $$
-> \left|\psi^{\prime \prime}\right\rangle=\frac{1}{\sqrt{2^{2}}} \sum_{x}(-1)^{1}|00\rangle\left(\frac{|0\rangle-|1\rangle}{\sqrt{2}}\right)
-> $$
->
-> 求和的 $x \in\{0,1\}^{2}$ 可能性包含
->
-> - $|x\rangle=|00\rangle$ 
-> - $|x\rangle=|01\rangle$ 
-> - $|x\rangle=|10\rangle$ 
-> - $|x\rangle=|11\rangle$ 
->
-> 如果不用通用公式，而是直接计算，结果是？
-> $$
-> \begin{aligned}
-> U _{ f }|000\rangle &=|0,0 \oplus f (0),0\rangle+|0,0, \oplus f (0)\rangle \\
-> &=|010\rangle+|001\rangle
-> \end{aligned}
-> $$
-> 还是？
-> $$
-> \begin{aligned}
-> U _{ f }|000\rangle &=|0,0 \oplus f (0),0 \oplus f (0)\rangle\\
-> &=|011\rangle 
-> \end{aligned}
-> $$
-> 经过验算，我认为是后者
+
+$$
+\left|\psi^{\prime \prime}\right\rangle=\frac{1}{\sqrt{2^{n}}} \sum_{x}(-1)^{f(x)}|x\rangle\left(\frac{|0\rangle-|1\rangle}{\sqrt{2}}\right)
+$$
+
+$$
+\left|\psi^{\prime \prime}\right\rangle=\frac{1}{\sqrt{2^{2}}} \sum_{x}(-1)^{1}|00\rangle\left(\frac{|0\rangle-|1\rangle}{\sqrt{2}}\right)
+$$
+
+求和的 $x \in\{0,1\}^{2}$ 可能性包含
+
+- $|x\rangle=|00\rangle$ 
+- $|x\rangle=|01\rangle$ 
+- $|x\rangle=|10\rangle$ 
+- $|x\rangle=|11\rangle$ 
+
+如果不用通用公式，而是直接计算，结果是？
+$$
+\begin{aligned}
+U _{ f }|000\rangle &=|0,0 \oplus f (0),0\rangle+|0,0, \oplus f (0)\rangle \\
+&=|010\rangle+|001\rangle
+\end{aligned}
+$$
+还是？
+$$
+\begin{aligned}
+U _{ f }|000\rangle &=|0,0 \oplus f (0),0 \oplus f (0)\rangle\\
+&=|011\rangle 
+\end{aligned}
+$$
+经过验算，我认为是后者
+
+> 补充过程结束
 
 最后一步是把 $H^{\otimes 2}$ 作用到前面两个量子比特上
 $$
@@ -773,45 +780,46 @@ $$
 
 > 补充笔记（向量的张量积(tensor products)）
 >
-> 二量子比特态可以写成两个单量子比特态之间的张量积(tensor products)
-> $$
-> | a \rangle \otimes| b \rangle
-> $$
-> 二量子比特态总共有4种可能
-> $$
-> |00\rangle,|01\rangle,|10\rangle,|11\rangle
-> $$
-> 如果用向量表示
-> $$
-> \begin{array}{l}
-> |01\rangle=\left(\begin{array}{l}
-> 1 \\
-> 0
-> \end{array}\right) \otimes\left(\begin{array}{l}
-> 0 \\
-> 1
-> \end{array}\right)=\left(\begin{array}{l}
-> 0 \\
-> 1 \\
-> 0 \\
-> 0
-> \end{array}\right) \\
-> |11\rangle=\left(\begin{array}{l}
-> 0 \\
-> 1
-> \end{array}\right) \otimes\left(\begin{array}{l}
-> 0 \\
-> 1
-> \end{array}\right)=\left(\begin{array}{l}
-> 0 \\
-> 0 \\
-> 0 \\
-> 1
-> \end{array}\right)
-> \end{array}
-> $$
 
+二量子比特态可以写成两个单量子比特态之间的张量积(tensor products)
+$$
+| a \rangle \otimes| b \rangle
+$$
+二量子比特态总共有4种可能
+$$
+|00\rangle,|01\rangle,|10\rangle,|11\rangle
+$$
+如果用向量表示
+$$
+\begin{array}{l}
+|01\rangle=\left(\begin{array}{l}
+1 \\
+0
+\end{array}\right) \otimes\left(\begin{array}{l}
+0 \\
+1
+\end{array}\right)=\left(\begin{array}{l}
+0 \\
+1 \\
+0 \\
+0
+\end{array}\right) \\
+|11\rangle=\left(\begin{array}{l}
+0 \\
+1
+\end{array}\right) \otimes\left(\begin{array}{l}
+0 \\
+1
+\end{array}\right)=\left(\begin{array}{l}
+0 \\
+0 \\
+0 \\
+1
+\end{array}\right)
+\end{array}
+$$
 
+> 补充笔记结束
 
 我们看到了向量的张量积(tensor products)，如果是n个量子比特的量子态，向量从长度就是 $2^{n}$ 。是指数增长的，一般计算机是受不了较大的指数增长。类似的，量子态的内积也是
 
